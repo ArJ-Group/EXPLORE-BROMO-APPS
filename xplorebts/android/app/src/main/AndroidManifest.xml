@@ -2,7 +2,7 @@
     package="com.example.xplorebts">
    <application
         android:label="xplorebts"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/logo_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
