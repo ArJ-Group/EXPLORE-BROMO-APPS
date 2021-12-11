@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\WEB;
 
-use App\Models\Transaction;
-use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\TransactionRequest;
+use App\Models\Transaction;
 use App\Models\TransactionItem;
+use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
 class TransactionController extends Controller
