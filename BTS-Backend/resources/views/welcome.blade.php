@@ -567,7 +567,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="landing/images/team-section-4.png" alt="">
+                            <img src="landing/images/meut.jpg" alt="">
                         </div>
                         <h4>Meuti Zari</h4>
                         <h6>UI&UX Designer</h6>
