@@ -1,19 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\WEB;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\TransactionRequest;
 use App\Models\Transaction;
+use Illuminate\Support\Str;
+use App\Http\Requests\TransactionRequest;
 use App\Models\TransactionItem;
-use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
 class TransactionController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        // TODO: the first time call page
         if (request()->ajax()) {
             $query = Transaction::with(['user']);
 
@@ -39,19 +42,35 @@ class TransactionController extends Controller
         return view('pages.dashboard.transaction.index');
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
     }
 
-    public function store(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(TransactionRequest $request)
     {
         //
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Transaction  $transaction
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     */
     public function show(Transaction $transaction)
     {
-        // TODO: show transaction item
         if (request()->ajax()) {
             $query = TransactionItem::with(['product'])->where('transactions_id', $transaction->id);
 
@@ -65,25 +84,42 @@ class TransactionController extends Controller
         return view('pages.dashboard.transaction.show', compact('transaction'));
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Transaction  $transaction
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     */
     public function edit(Transaction $transaction)
     {
-        // TODO: call view edit
         return view('pages.dashboard.transaction.edit',[
             'item' => $transaction
         ]);
     }
 
-    public function update(TransactionRequest $request,Transaction $transaction)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Transaction  $transaction
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(TransactionRequest $request, Transaction $transaction)
     {
-        // TODO: update data to database
-         $data = $request->all();
+        $data = $request->all();
 
         $transaction->update($data);
 
         return redirect()->route('dashboard.transaction.index');
     }
 
-    public function destroy($id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Transaction  $transaction
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(Transaction $transaction)
     {
         //
     }

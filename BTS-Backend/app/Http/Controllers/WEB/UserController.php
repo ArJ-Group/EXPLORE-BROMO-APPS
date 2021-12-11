@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\WEB;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\UserRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Http\Requests\UserRequest;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        // TODO: the first call page
         if (request()->ajax()) {
             $query = User::query();
 
@@ -37,42 +40,75 @@ class UserController extends Controller
         return view('pages.dashboard.user.index');
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
     }
 
-    public function store(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(UserRequest $request)
     {
         //
     }
 
-    public function show($id)
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     */
+    public function show(User $user)
     {
         //
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     */
     public function edit(User $user)
     {
-        // TODO: call the view edit
         return view('pages.dashboard.user.edit',[
             'item' => $user
         ]);
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(UserRequest $request, User $user)
     {
-        // TODO: store updated data to database
         $data = $request->all();
+        
         $user->update($data);
-        // dd($data);
 
         return redirect()->route('dashboard.user.index');
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function destroy(User $user)
     {
-        // TODO: delete data user
         $user->delete();
 
         return redirect()->route('dashboard.user.index');

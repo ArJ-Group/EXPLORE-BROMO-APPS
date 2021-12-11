@@ -7,28 +7,34 @@ use App\Http\Requests\ProductCategoryRequest;
 use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class ProductCategoryController extends Controller
 {
     public function index()
     {
-        // TODO: first time call the page
         if (request()->ajax()) {
             $query = ProductCategory::query();
 
-            return DataTables::of($query)->addColumn('action', function($item) {
-                return '
-                <a class="inline-block border border-gray-700 bg-gray-700 text-white rounded-md px-2 py-1 m-1 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline" 
-                    href="'. route("dashboard.category.edit", $item->id) .'"> 
-                        Edit 
-                </a>
-                <form class="inline-block" action="'. route('dashboard.category.destroy', $item->id) . '" method="POST">
-                    <button class="border border-red-500 bg-red-500 text-white rounded-md px-2 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
-                        Hapus
-                    </button>
-                    '. method_field('delete') . csrf_field().'
-                </form>';
-            })->rawColumns(['action'])->make();
+            return DataTables::of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                        <a class="inline-block border border-gray-700 bg-gray-700 text-white rounded-md px-2 py-1 m-1 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline" 
+                            href="' . route('dashboard.category.edit', $item->id) . '">
+                            Edit
+                        </a>
+                        <form class="inline-block" action="' . route('dashboard.category.destroy', $item->id) . '" method="POST">
+                        <button class="border border-red-500 bg-red-500 text-white rounded-md px-2 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline" >
+                            Hapus
+                        </button>
+                            ' . method_field('delete') . csrf_field() . '
+                        </form>';
+                })
+                ->editColumn('price', function ($item) {
+                    return number_format($item->price);
+                })
+                ->rawColumns(['action'])
+                ->make();
         }
 
         return view('pages.dashboard.category.index');
@@ -36,7 +42,6 @@ class ProductCategoryController extends Controller
 
     public function create()
     {
-        // TODO: go to view category.create
         return view('pages.dashboard.category.create');
     }
 
@@ -49,6 +54,11 @@ class ProductCategoryController extends Controller
         return redirect()->route('dashboard.category.index');
     }
 
+    public function show(ProductCategory $category)
+    {
+        //
+    }
+    
     public function edit(ProductCategory $category)
     {
         // TODO: Open view edit
