@@ -96,18 +96,16 @@
             <div class="row v-center">
 
                 <div class="col-xs-12 col-md-7 header-text">
-                    <div class="logo" style="position:fixed;bottom:650px">
+                    <div class="logo" style="position:fixed;top:max(-15px)">
                         <a href="/" class="navbar-brand logo">
-                            <img id="bromo" alt="logo" src="images/logo.png" style="height: 150px;display: ;">
+                            <img id="bromo" alt="logo" src="images/logo.png" style="height: max(130px);">
                         </a>
                     </div>
 
                     <h2>Explore Bromo Tengger Semeru</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ex inventore vel error quibusdam
-                        animi fugiat, doloribus dolores consectetur nulla deleniti sint blanditiis quod debitis quis
-                        vitae officiis tempora numquam.</p>
-
-
+                    <p>Mount Bromo, is an active volcano and part of the Tengger massif, in East Java, Indonesia. At 2,329 meters (7,641 ft) 
+                        it is not the highest peak of the massif, but is the best known. The massif area is one of the most visited 
+                        tourist attractions in East Java, Indonesia. The volcano belongs to the Bromo Tengger Semeru National Park.</p>
 
                     <div class="gambar">
 
@@ -250,13 +248,11 @@
                                 <div class="v-center">
                                     <div class="col-xs-12 col-md-6">
                                         <div class="caption-title" data-animation="animated fadeInUp">
-                                            <h2>Easy to build</h2>
+                                            <h2>Camping Tools</h2>
                                         </div>
                                         <div class="caption-desc" data-animation="animated fadeInUp">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                commodo consequat. Duis aute</p>
+                                            <p>This camping tool is a feature that provides everything related 
+                                                to tools that do have a correlation with later when camping</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
                                             <a href="#" class="button">Read more</a>
@@ -278,13 +274,11 @@
                                 <div class="v-center">
                                     <div class="col-xs-12 col-md-6">
                                         <div class="caption-title" data-animation="animated fadeInUp">
-                                            <h2>Easy to use</h2>
+                                            <h2>Jeeps Car</h2>
                                         </div>
                                         <div class="caption-desc" data-animation="animated fadeInUp">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                commodo consequat. Duis aute</p>
+                                            <p>Jeeps car is a feature where later the provider can use this feature 
+                                                to rent a jeeps car easily by using this BTS app</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
                                             <a href="#" class="button">Read more</a>
@@ -306,13 +300,11 @@
                                 <div class="v-center">
                                     <div class="col-xs-12 col-md-6">
                                         <div class="caption-title" data-animation="animated fadeInUp">
-                                            <h2>Easy to customize</h2>
+                                            <h2>Inn</h2>
                                         </div>
                                         <div class="caption-desc" data-animation="animated fadeInUp">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                commodo consequat. Duis aute</p>
+                                            <p>Inn is a very important feature for 
+                                                people who want to visit Bromo Semeru because here this feature provides lodging if you want to see Bromo later than usual</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
                                             <a href="#" class="button">Read more</a>
@@ -334,13 +326,11 @@
                                 <div class="v-center">
                                     <div class="col-xs-12 col-md-6">
                                         <div class="caption-title" data-animation="animated fadeInUp">
-                                            <h2>Awesome design</h2>
+                                            <h2>Trip</h2>
                                         </div>
                                         <div class="caption-desc" data-animation="animated fadeInUp">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                commodo consequat. Duis aute</p>
+                                            <p>Trip is a feature where later there will be a 
+                                                feature that is used to travel to Bromo itself and here provides some transportation if you want to go to Bromo easily and quickly</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
                                             <a href="#" class="button">Read more</a>
@@ -362,16 +352,16 @@
 
                         <ol class="carousel-indicators caption-indector">
                             <li data-target="#caption_slide" data-slide-to="0" class="active">
-                                <strong>Lorem ipsum </strong>consectetur adipisicing elit.
+                                <strong>Camping Tools </strong>Provide your camp needs.
                             </li>
                             <li data-target="#caption_slide" data-slide-to="1">
-                                <strong>Lorem ipsum </strong>consectetur adipisicing elit.
+                                <strong>Jeeps Car </strong>Rent a jeep car to exploring Bromo Tengger Semeru(Drived Included).
                             </li>
                             <li data-target="#caption_slide" data-slide-to="2">
-                                <strong>Lorem ipsum </strong>consectetur adipisicing elit.
+                                <strong>Inn </strong>Book a home stay to keep you close with Bromo Tengger Semeru.
                             </li>
                             <li data-target="#caption_slide" data-slide-to="3">
-                                <strong>Lorem ipsum </strong>consectetur adipisicing elit.
+                                <strong>Trip </strong>Ready to pick you up and take you back to home after exploring Bromo Tengger Semeru.
                             </li>
                         </ol>
                     </div>
@@ -521,8 +511,7 @@
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
                     <div class="page-title">
                         <h2>Special team</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at,
-                            facere harum fugiat!</p>
+                        <p>solid team and very integrity !</p>
                     </div>
                 </div>
             </div>
@@ -532,8 +521,9 @@
                         <div class="team-photo">
                             <img src="landing/images/team-section-1.png" alt="">
                         </div>
-                        <h4>JEMY SEDONCE</h4>
-                        <h6>Co. Founder</h6>
+                        <h4>M Alif Ananda</h4>
+                        <h6>Project Manager</h6>
+                        <h6>Android Frontend Developer</h6>
                         <ul class="social-menu">
                             <li><a href="#"><i class="ti-facebook"></i></a></li>
                             <li><a href="#"><i class="ti-twitter"></i></a></li>
@@ -545,10 +535,11 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="landing/images/team-section-2.png" alt="">
+                            <img src="images/team/2.jpeg" alt="">
                         </div>
-                        <h4>DEBORAH BROWN</h4>
-                        <h6>UX Designer</h6>
+                        <h4>Ariono Septian</h4>
+                        <h6>FullStack Developer</h6>
+                        <h6>Special Creator</h6>
                         <ul class="social-menu">
                             <li><a href="#"><i class="ti-facebook"></i></a></li>
                             <li><a href="#"><i class="ti-twitter"></i></a></li>
@@ -560,10 +551,11 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="landing/images/team-section-3.png" alt="">
+                            <img src="images/team/rjn.png" alt="">
                         </div>
-                        <h4>HARRY BANKS</h4>
-                        <h6>Founder</h6>
+                        <h4>Rajendra Rakha </h4>
+                        <h6>FullStack Developer</h6>
+                        <h6>Website Frontend Specialist </h6>
                         <ul class="social-menu">
                             <li><a href="#"><i class="ti-facebook"></i></a></li>
                             <li><a href="#"><i class="ti-twitter"></i></a></li>
@@ -577,8 +569,9 @@
                         <div class="team-photo">
                             <img src="landing/images/team-section-4.png" alt="">
                         </div>
-                        <h4>VICTORIA CLARK</h4>
-                        <h6>Creative Director</h6>
+                        <h4>Meuti Zari</h4>
+                        <h6>UI&UX Designer</h6>
+                        <h6>Android Backend Specialist</h6>
                         <ul class="social-menu">
                             <li><a href="#"><i class="ti-facebook"></i></a></li>
                             <li><a href="#"><i class="ti-twitter"></i></a></li>
