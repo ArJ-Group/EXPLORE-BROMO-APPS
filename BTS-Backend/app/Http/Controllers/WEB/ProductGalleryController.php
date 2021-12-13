@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\WEB;
 
-use App\Models\Product;
-use Illuminate\Http\Request;
-use App\Models\ProductGallery;
-use Illuminate\Support\Facades\Storage;
-use Yajra\DataTables\Facades\DataTables;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductGalleryRequest;
+use App\Http\Requests\ProductRequest;
+use App\Models\Product;
+use App\Models\ProductGallery;
+use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class ProductGalleryController extends Controller
 {

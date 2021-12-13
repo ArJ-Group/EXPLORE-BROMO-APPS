@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\WEB;
 
-use App\Models\User;
-use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
