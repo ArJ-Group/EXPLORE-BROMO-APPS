@@ -12,13 +12,9 @@ use Yajra\DataTables\Facades\DataTables;
 
 class ProductGalleryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Product $product)
     {
+        // TODO: firts time call the controller
         if (request()->ajax()) {
             $query = ProductGallery::where('products_id', $product->id);
 
@@ -29,11 +25,15 @@ class ProductGalleryController extends Controller
                         <button class="border border-red-500 bg-red-500 text-white rounded-md px-2 py-1 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline" >
                             Hapus
                         </button>
+                        <a class="inline-block border border-gray-700 bg-gray-700 text-white rounded-md px-2 py-1 m-1 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline" 
+                        href="' . route('dashboard.product.edit', $item->id) . '">
+                            Edit
+                    </a>
                             ' . method_field('delete') . csrf_field() . '
                         </form>';
                 })
                 ->editColumn('url', function ($item) {
-                    return '<img style="max-width: 150px;" src="'. $item->url .'"/>';
+                    return '<img style="max-width: 150px;" src="' . $item->url . '"/>';
                 })
                 ->editColumn('is_featured', function ($item) {
                     return $item->is_featured ? 'Yes' : 'No';
@@ -44,30 +44,29 @@ class ProductGalleryController extends Controller
 
         return view('pages.dashboard.gallery.index', compact('product'));
     }
-    
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create(Product $product)
     {
+        // TODO: call the view gallery create
+        Product::all();
+
         return view('pages.dashboard.gallery.create', compact('product'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function store(ProductGalleryRequest $request, Product $product)
     {
+        ProductGallery::create($request->all());
+
+        /*
+        // TODO: create new foto files
         $files = $request->file('files');
 
         if($request->hasFile('files'))
         {
             foreach ($files as $file) {
+                // atau bisa menggunakan storage/gallery
                 $path = $file->store('public/gallery');
 
                 ProductGallery::create([
@@ -76,54 +75,31 @@ class ProductGalleryController extends Controller
                 ]);
             }
         }
+        */
 
         return redirect()->route('dashboard.product.gallery.index', $product->id);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ProductGallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ProductGallery $gallery)
+    public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ProductGallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ProductGallery $gallery)
+    public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ProductGallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function update(ProductGalleryRequest $request, ProductGallery $gallery)
+    public function update(ProductRequest $request, ProductGallery $gallery)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\ProductGallery  $productGallery
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(ProductGallery $gallery)
     {
+        // TODO: delete file
         $gallery->delete();
 
-        return redirect()->route('dashboard.product.gallery.index', $gallery->products_id);
+        return redirect()->route('dashboard.product.gallery.index');
     }
 }
