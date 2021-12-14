@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:explore_bts/models/user_models.dart';
-import 'package:explore_bts/services/auth_service.dart';
+import 'package:xplorebts/models/user_models.dart';
+import 'package:xplorebts/services/auth_service.dart';
 
 class AuthProvider with ChangeNotifier {
   late UserModel _user;

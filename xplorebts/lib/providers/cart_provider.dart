@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shamo_apps/models/cart_model.dart';
-import 'package:shamo_apps/models/product_models.dart';
+import 'package:xplorebts/models/cart_model.dart';
+import 'package:xplorebts/models/product_models.dart';
 
 class CartProvider with ChangeNotifier {
   List<CartModel> _carts = [];
@@ -13,7 +13,8 @@ class CartProvider with ChangeNotifier {
 
   addCart(ProductModel product) {
     if (productExist(product)) {
-      int idx = _carts.indexWhere((element) => element.product?.id == product.id);
+      int idx =
+          _carts.indexWhere((element) => element.product?.id == product.id);
       _carts[idx].qty = (_carts[idx].qty ?? 0) + 1;
     } else {
       _carts.add(CartModel(
@@ -31,14 +32,14 @@ class CartProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  addQuantity (int id) {
+  addQuantity(int id) {
     _carts[id].qty = (_carts[id].qty ?? 0) + 1;
     notifyListeners();
   }
 
   reduceQuantity(int id) {
     _carts[id].qty = (_carts[id].qty ?? 0) - 1;
-    if(_carts[id].qty == 0){
+    if (_carts[id].qty == 0) {
       _carts.removeAt(id);
     }
     notifyListeners();
@@ -46,7 +47,7 @@ class CartProvider with ChangeNotifier {
 
   totalItems() {
     int total = 0;
-    for(var item in _carts) {
+    for (var item in _carts) {
       total += item.qty!;
     }
     return total;
@@ -54,14 +55,15 @@ class CartProvider with ChangeNotifier {
 
   totalPrice() {
     double total = 0;
-    for(var item in _carts) {
+    for (var item in _carts) {
       total += (item.qty! * item.product!.price!);
     }
     return total;
   }
 
   productExist(ProductModel product) {
-    if (_carts.indexWhere((element) => element.product?.id == product.id) == -1 ) {
+    if (_carts.indexWhere((element) => element.product?.id == product.id) ==
+        -1) {
       return false;
     } else {
       return true;
