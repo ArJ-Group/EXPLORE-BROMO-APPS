@@ -519,7 +519,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="landing/images/team-section-1.png" alt="">
+                            <img src="images/team/alif.jpeg" style="height: max(250px);" alt="">
                         </div>
                         <h4>M Alif Ananda</h4>
                         <h6>Project Manager</h6>
@@ -535,7 +535,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="images/team/2.jpeg" alt="">
+                            <img src="images/team/2.jpeg" style="height: max(250px);" alt="">
                         </div>
                         <h4>Ariono Septian</h4>
                         <h6>FullStack Developer</h6>
@@ -551,7 +551,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="images/team/rjn.png" alt="">
+                            <img src="images/team/rjn.png" style="height: max(250px);" alt="">
                         </div>
                         <h4>Rajendra Rakha </h4>
                         <h6>FullStack Developer</h6>
@@ -567,7 +567,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="single-team">
                         <div class="team-photo">
-                            <img src="landing/images/meut.jpg" alt="">
+                            <img src="landing/images/meut.jpg" style="height: max(250px);" alt="">
                         </div>
                         <h4>Meuti Zari</h4>
                         <h6>UI&UX Designer</h6>
