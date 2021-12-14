@@ -57,27 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  cloud_firestore:
-    dependency: "direct main"
-    description:
-      name: cloud_firestore
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.5.4"
-  cloud_firestore_platform_interface:
-    dependency: transitive
-    description:
-      name: cloud_firestore_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.4.9"
-  cloud_firestore_web:
-    dependency: transitive
-    description:
-      name: cloud_firestore_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.6.4"
   collection:
     dependency: transitive
     description:
@@ -120,30 +99,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.2"
-<<<<<<< HEAD
-=======
-  firebase_core:
-    dependency: "direct main"
-    description:
-      name: firebase_core
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.10.5"
-  firebase_core_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_core_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.2.2"
-  firebase_core_web:
-    dependency: transitive
-    description:
-      name: firebase_core_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.5.2"
->>>>>>> 761bc5cd7b525cfff7afb43140fbe3ba928d5b60
   flutter:
     dependency: "direct main"
     description: flutter
@@ -151,16 +106,6 @@ packages:
     version: "0.0.0"
   flutter_launcher_icons:
     dependency: "direct main"
-<<<<<<< HEAD
-=======
-    description:
-      name: flutter_launcher_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.2"
-  flutter_lints:
-    dependency: "direct dev"
->>>>>>> 761bc5cd7b525cfff7afb43140fbe3ba928d5b60
     description:
       name: flutter_launcher_icons
       url: "https://pub.dartlang.org"
@@ -171,14 +116,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
-=======
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
->>>>>>> 761bc5cd7b525cfff7afb43140fbe3ba928d5b60
   google_fonts:
     dependency: "direct main"
     description:
@@ -194,30 +131,6 @@ packages:
     source: hosted
     version: "0.13.4"
   http_parser:
-<<<<<<< HEAD
-=======
-    dependency: transitive
-    description:
-      name: http_parser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.0"
-  image:
-    dependency: transitive
-    description:
-      name: image
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0"
-  js:
-    dependency: transitive
-    description:
-      name: js
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.3"
-  lints:
->>>>>>> 761bc5cd7b525cfff7afb43140fbe3ba928d5b60
     dependency: transitive
     description:
       name: http_parser
