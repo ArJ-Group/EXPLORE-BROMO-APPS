@@ -21,7 +21,7 @@
                         name: 'action',
                         orderable: false,
                         searchable: false,
-                        width: '25%'
+                        width: '15%'
                     },
                 ],
             });

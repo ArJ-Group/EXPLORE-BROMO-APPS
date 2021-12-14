@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class FieldProductCategoriesTable extends Migration
 {
-    
     public function up()
     {
         // TODO: create digunakan jika belum ada nama tablenya
