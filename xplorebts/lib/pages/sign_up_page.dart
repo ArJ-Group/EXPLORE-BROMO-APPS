@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/providers/auth_provider.dart';
-import 'package:xplorebts/theme.dart';
 import 'package:xplorebts/widgets/loading_button.dart';
+
 
 class SignUpPage extends StatefulWidget {
   @override
