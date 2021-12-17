@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fios_app/models/cart_model.dart';
-import 'package:fios_app/services/transaction_service.dart';
+import 'package:xplorebts/models/cart_model.dart';
+import 'package:xplorebts/services/transaction_service.dart';
 
 class TransactionProvider with ChangeNotifier {
   Future<bool> checkout(
