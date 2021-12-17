@@ -52,7 +52,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
     Widget header() {
       return Container(
-        margin: EdgeInsets.only(top: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -75,8 +74,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
             Center(
               child: Container(
-                width: 170,
-                height: 180,
+                width: 150,
+                height: 160,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
@@ -131,8 +130,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         style: primaryTextStyle,
                         controller: nameController,
                         decoration: InputDecoration.collapsed(
-                          hintText: 'Your Full Name',
-                          hintStyle: subtitleTextStyle,
+                          hintText: 'Full Name',
+                          hintStyle: emailpass,
                         ),
                       ),
                     ),
@@ -185,8 +184,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         style: primaryTextStyle,
                         controller: usernameController,
                         decoration: InputDecoration.collapsed(
-                          hintText: 'Your Username',
-                          hintStyle: subtitleTextStyle,
+                          hintText: 'Username',
+                          hintStyle: emailpass,
                         ),
                       ),
                     ),
@@ -240,8 +239,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         controller: emailController,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration.collapsed(
-                          hintText: 'Your Email Address',
-                          hintStyle: subtitleTextStyle,
+                          hintText: 'Email@Bromo.com',
+                          hintStyle: emailpass,
                         ),
                       ),
                     ),
@@ -295,8 +294,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         obscureText: true,
                         controller: passwordController,
                         decoration: InputDecoration.collapsed(
-                          hintText: 'Your Password',
-                          hintStyle: subtitleTextStyle,
+                          hintText: 'Password',
+                          hintStyle: emailpass,
                         ),
                       ),
                     ),

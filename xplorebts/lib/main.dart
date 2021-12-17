@@ -5,6 +5,7 @@ import 'pages/splash_page.dart';
 import 'providers/auth_provider.dart';
 import 'providers/product_provider.dart';
 import 'pages/sign_up_page.dart';
+import 'pages/home/main_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => SplashPage(),
           '/sign-in': (context) => SignInPage(),
           '/sign-up': (context) => SignUpPage(),
+          '/home': (context) => MainPage(),
         },
       ),
     );

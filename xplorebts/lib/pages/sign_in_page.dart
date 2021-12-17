@@ -114,7 +114,7 @@ class _SignInPageState extends State<SignInPage> {
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
-                color: backgroundColor1,
+                color: backgroundColor2,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Center(
@@ -133,7 +133,7 @@ class _SignInPageState extends State<SignInPage> {
                         keyboardType: TextInputType.emailAddress,
                         controller: emailController,
                         decoration: InputDecoration.collapsed(
-                          hintText: 'Your Email Address',
+                          hintText: 'Email@Bromo.com',
                           hintStyle: emailpass,
                         ),
                       ),
@@ -188,7 +188,7 @@ class _SignInPageState extends State<SignInPage> {
                         obscureText: true,
                         controller: passwordController,
                         decoration: InputDecoration.collapsed(
-                          hintText: 'Your Password',
+                          hintText: 'Password',
                           hintStyle: emailpass,
                         ),
                       ),
@@ -235,7 +235,7 @@ class _SignInPageState extends State<SignInPage> {
             Expanded(
               child: Divider(
                 thickness: 3,
-                color: primaryColor,
+                color: alertColor,
               ),
             ),
             SizedBox(width: 20),
@@ -250,7 +250,7 @@ class _SignInPageState extends State<SignInPage> {
             Expanded(
               child: Divider(
                 thickness: 3,
-                color: primaryColor,
+                color: alertColor,
               ),
             ),
           ],
