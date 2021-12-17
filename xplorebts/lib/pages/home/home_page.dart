@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:explore_bts/models/user_models.dart';
-import 'package:explore_bts/providers/auth_provider.dart';
-import 'package:explore_bts/providers/product_provider.dart';
-// import 'package:google_fonts/google_fonts.dart';
-import 'package:explore_bts/theme.dart';
-import 'package:explore_bts/widget/product_card.dart';
-import 'package:explore_bts/widget/product_tile.dart';
-import 'dart:core';
+import 'package:xplorebts/models/user_model.dart';
+import 'package:xplorebts/providers/auth_provider.dart';
+import 'package:xplorebts/providers/product_provider.dart';
+import 'package:xplorebts/theme.dart';
+import 'package:xplorebts/widgets/product_card.dart';
+import 'package:xplorebts/widgets/product_tile.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -19,7 +17,10 @@ class HomePage extends StatelessWidget {
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
-            top: defaultMargin, left: defaultMargin, right: defaultMargin),
+          top: defaultMargin,
+          left: defaultMargin,
+          right: defaultMargin,
+        ),
         child: Row(
           children: [
             Expanded(
@@ -29,12 +30,18 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Hallo, ${user.name}',
                     style: primaryTextStyle.copyWith(
-                        fontSize: 24, fontWeight: semiBold),
+                      fontSize: 24,
+                      fontWeight: semiBold,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   Text(
                     '@${user.username}',
-                    style: thirdTextstyle.copyWith(fontSize: 16),
-                  )
+                    style: subtitleTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -57,8 +64,11 @@ class HomePage extends StatelessWidget {
 
     Widget categories() {
       return Container(
-        margin: EdgeInsets.only(top: defaultMargin),
+        margin: EdgeInsets.only(
+          top: defaultMargin,
+        ),
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
@@ -66,7 +76,10 @@ class HomePage extends StatelessWidget {
                 width: defaultMargin,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
                 margin: EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -75,49 +88,93 @@ class HomePage extends StatelessWidget {
                 child: Text(
                   'All Shoes',
                   style: primaryTextStyle.copyWith(
-                      fontSize: 13, fontWeight: medium),
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
                 margin: EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: thirdColor),
-                  color: transparantColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                  color: transparentColor,
                 ),
                 child: Text(
                   'Running',
-                  style:
-                      thirdTextstyle.copyWith(fontSize: 13, fontWeight: medium),
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
                 margin: EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: thirdColor),
-                  color: transparantColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                  color: transparentColor,
                 ),
                 child: Text(
-                  'Traning',
-                  style:
-                      thirdTextstyle.copyWith(fontSize: 13, fontWeight: medium),
+                  'Training',
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
                 margin: EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: thirdColor),
-                  color: transparantColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                  color: transparentColor,
                 ),
                 child: Text(
                   'Basketball',
-                  style:
-                      thirdTextstyle.copyWith(fontSize: 13, fontWeight: medium),
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                  color: transparentColor,
+                ),
+                child: Text(
+                  'Hiking',
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
                 ),
               ),
             ],
@@ -129,19 +186,25 @@ class HomePage extends StatelessWidget {
     Widget popularProductsTitle() {
       return Container(
         margin: EdgeInsets.only(
-            top: defaultMargin, left: defaultMargin, right: defaultMargin),
+          top: defaultMargin,
+          left: defaultMargin,
+          right: defaultMargin,
+        ),
         child: Text(
           'Popular Products',
-          style: primaryTextStyle.copyWith(fontSize: 22, fontWeight: semiBold),
+          style: primaryTextStyle.copyWith(
+            fontSize: 22,
+            fontWeight: semiBold,
+          ),
         ),
       );
     }
 
     Widget popularProducts() {
       return Container(
-        // height: 278,
         margin: EdgeInsets.only(top: 14),
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
@@ -150,7 +213,9 @@ class HomePage extends StatelessWidget {
               ),
               Row(
                 children: productProvider.products
-                    .map((product) => ProductCard(product))
+                    .map(
+                      (product) => ProductCard(product),
+                    )
                     .toList(),
               ),
             ],
@@ -162,17 +227,25 @@ class HomePage extends StatelessWidget {
     Widget newArrivalsTitle() {
       return Container(
         margin: EdgeInsets.only(
-            top: defaultMargin, left: defaultMargin, right: defaultMargin),
+          top: defaultMargin,
+          left: defaultMargin,
+          right: defaultMargin,
+        ),
         child: Text(
           'New Arrivals',
-          style: primaryTextStyle.copyWith(fontSize: 22, fontWeight: semiBold),
+          style: primaryTextStyle.copyWith(
+            fontSize: 22,
+            fontWeight: semiBold,
+          ),
         ),
       );
     }
 
     Widget newArrivals() {
       return Container(
-        margin: EdgeInsets.only(top: 14),
+        margin: EdgeInsets.only(
+          top: 14,
+        ),
         child: Column(
           children: productProvider.products
               .map(
@@ -184,13 +257,14 @@ class HomePage extends StatelessWidget {
     }
 
     return ListView(
+      physics: BouncingScrollPhysics(),
       children: [
         header(),
         categories(),
         popularProductsTitle(),
         popularProducts(),
         newArrivalsTitle(),
-        newArrivals()
+        newArrivals(),
       ],
     );
   }

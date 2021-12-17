@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shamo_apps/models/product_models.dart';
+import 'package:xplorebts/models/product_model.dart';
 
 class WishlistProvider with ChangeNotifier {
   List<ProductModel> _wishlist = [];

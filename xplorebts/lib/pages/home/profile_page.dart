@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shamo_apps/models/user_models.dart';
-import 'package:shamo_apps/providers/auth_provider.dart';
-import 'package:shamo_apps/theme.dart';
+import 'package:xplorebts/models/user_model.dart';
+import 'package:xplorebts/providers/auth_provider.dart';
+
+import '/theme.dart';
 
 class ProfilePage extends StatelessWidget {
-  // const HomaPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
@@ -19,12 +18,15 @@ class ProfilePage extends StatelessWidget {
         elevation: 0,
         flexibleSpace: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(defaultMargin),
+            padding: EdgeInsets.all(
+              defaultMargin,
+            ),
             child: Row(
               children: [
                 ClipOval(
                   child: Image.network(
                     user.profilePhotoUrl!,
+                    width: 64,
                   ),
                 ),
                 SizedBox(
@@ -36,12 +38,18 @@ class ProfilePage extends StatelessWidget {
                     children: [
                       Text(
                         'Hallo, ${user.name}',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: primaryTextStyle.copyWith(
-                            fontSize: 24, fontWeight: semiBold),
+                          fontSize: 24,
+                          fontWeight: semiBold,
+                        ),
                       ),
                       Text(
                         '@${user.username}',
-                        style: thirdTextstyle.copyWith(fontSize: 16),
+                        style: subtitleTextStyle.copyWith(
+                          fontSize: 16,
+                        ),
                       ),
                     ],
                   ),
@@ -85,9 +93,13 @@ class ProfilePage extends StatelessWidget {
     Widget content() {
       return Expanded(
         child: Container(
-          padding: EdgeInsets.only(left: defaultMargin),
           width: double.infinity,
-          decoration: BoxDecoration(color: backgroundColor3),
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+          ),
+          decoration: BoxDecoration(
+            color: backgroundColor3,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -97,27 +109,43 @@ class ProfilePage extends StatelessWidget {
               Text(
                 'Account',
                 style: primaryTextStyle.copyWith(
-                    fontSize: 16, fontWeight: semiBold),
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/edit-profile');
                 },
-                child: menuItem('Edit Profile'),
+                child: menuItem(
+                  'Edit Profile',
+                ),
               ),
-              menuItem('Your Orders'),
-              menuItem('Help'),
+              menuItem(
+                'Your Orders',
+              ),
+              menuItem(
+                'Help',
+              ),
               SizedBox(
                 height: 30,
               ),
               Text(
                 'General',
                 style: primaryTextStyle.copyWith(
-                    fontSize: 16, fontWeight: semiBold),
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
               ),
-              menuItem('Privacy & Policy'),
-              menuItem('Term of Service'),
-              menuItem('Rate App'),
+              menuItem(
+                'Privacy & Policy',
+              ),
+              menuItem(
+                'Term of Service',
+              ),
+              menuItem(
+                'Rate App',
+              ),
             ],
           ),
         ),
@@ -125,7 +153,10 @@ class ProfilePage extends StatelessWidget {
     }
 
     return Column(
-      children: [header(), content()],
+      children: [
+        header(),
+        content(),
+      ],
     );
   }
 }

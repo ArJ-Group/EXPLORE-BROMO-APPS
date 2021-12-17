@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:explore_bts/providers/wishlist_provider.dart';
-import 'package:explore_bts/theme.dart';
-import 'package:explore_bts/widget/wishlist_card.dart';
+import 'package:xplorebts/providers/page_provider.dart';
+import 'package:xplorebts/providers/wishlist_provider.dart';
+import 'package:xplorebts/widgets/wishlist_card.dart';
+
+import '../../theme.dart';
 
 class WishlistPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WishlistProvider wishlistProvider = Provider.of<WishlistProvider>(context);
+    PageProvider pageProvider = Provider.of<PageProvider>(context);
 
     Widget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
         centerTitle: true,
-        title: Text('Favorite Shoes'),
+        title: Text(
+          'Favorite Shoes',
+        ),
         elevation: 0,
         automaticallyImplyLeading: false,
       );
@@ -36,8 +41,10 @@ class WishlistPage extends StatelessWidget {
               ),
               Text(
                 ' You don\'t have dream shoes?',
-                style:
-                    primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+                style: primaryTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: medium,
+                ),
               ),
               SizedBox(
                 height: 12,
@@ -50,23 +57,30 @@ class WishlistPage extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                  height: 44,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
+                height: 44,
+                child: TextButton(
+                  onPressed: () {
+                    pageProvider.currentIndex = 0;
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 24,
                     ),
-                    child: Text(
-                      'Explore Store',
-                      style: primaryTextStyle.copyWith(
-                          fontSize: 16, fontWeight: medium),
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                  ))
+                  ),
+                  child: Text(
+                    'Explore Store',
+                    style: primaryTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: medium,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -78,7 +92,9 @@ class WishlistPage extends StatelessWidget {
         child: Container(
           color: backgroundColor3,
           child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+            padding: EdgeInsets.symmetric(
+              horizontal: defaultMargin,
+            ),
             children: wishlistProvider.wishlist
                 .map(
                   (product) => WishlistCard(product),
@@ -93,7 +109,7 @@ class WishlistPage extends StatelessWidget {
       children: [
         header(),
         // emptyWishlist(),
-        content(),
+        wishlistProvider.wishlist.length == 0 ? emptyWishlist() : content(),
       ],
     );
   }
