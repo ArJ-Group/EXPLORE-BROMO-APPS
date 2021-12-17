@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/providers/auth_provider.dart';
+import 'package:xplorebts/theme.dart';
 import 'package:xplorebts/widgets/loading_button.dart';
-
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -67,7 +67,7 @@ class _SignUpPageState extends State<SignUpPage> {
               height: 2,
             ),
             Text(
-              'Register To Continue ',
+              'Register ',
               style: subtitleTextStyle,
             ),
           ],
@@ -83,7 +83,7 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Full Name',
-              style: primaryTextStyle.copyWith(
+              style: subtitleTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
               ),
@@ -137,7 +137,7 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Username',
-              style: primaryTextStyle.copyWith(
+              style: subtitleTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
               ),
@@ -191,7 +191,7 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Email Address',
-              style: primaryTextStyle.copyWith(
+              style: subtitleTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
               ),
@@ -246,7 +246,7 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Password',
-              style: primaryTextStyle.copyWith(
+              style: subtitleTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
               ),
