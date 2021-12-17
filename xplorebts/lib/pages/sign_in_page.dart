@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/theme.dart';
+//import 'package:xplorebts/services/sign_in_firebase.dart';
 import 'package:xplorebts/widgets/loading_button.dart';
+//import 'package:xplorebts/services/auth_firebase.dart';
 
 class SignInPage extends StatefulWidget {
   @override
   _SignInPageState createState() => _SignInPageState();
+
+  void then(Null Function(result) param0) {}
 }
+
+class result {}
 
 class _SignInPageState extends State<SignInPage> {
   TextEditingController emailController = TextEditingController(text: '');
@@ -222,14 +228,29 @@ class _SignInPageState extends State<SignInPage> {
 
     Widget or() {
       return Container(
-        margin: EdgeInsets.only(bottom: 30),
+        margin: EdgeInsets.only(top: 0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Expanded(
+              child: Divider(
+                thickness: 3,
+                color: primaryColor,
+              ),
+            ),
+            SizedBox(width: 20),
             Text(
-              'OR',
-              style: subtitleTextStyle.copyWith(
-                fontSize: 12,
+              "OR",
+              style: TextStyle(
+                color: blackColor,
+                fontWeight: bold,
+              ),
+            ),
+            SizedBox(width: 20),
+            Expanded(
+              child: Divider(
+                thickness: 3,
+                color: primaryColor,
               ),
             ),
           ],
@@ -237,12 +258,69 @@ class _SignInPageState extends State<SignInPage> {
       );
     }
 
+    Widget google() {
+      return Container(
+        margin: EdgeInsets.only(top: 10),
+        child: Center(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(29),
+
+            // ignore: deprecated_member_use
+            child: OutlineButton(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+              color: alertColor,
+              onPressed: () {
+                SignInPage().then((result) {
+                  if (result != null) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return SignInPage();
+                        },
+                      ),
+                    );
+                  }
+                });
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50)),
+              highlightElevation: 5,
+              borderSide: BorderSide(color: Colors.grey),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset('assets/google.png', height: 25.0),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text(
+                      'Sign in with Google',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
     Widget signup() {
       return Container(
-        margin: EdgeInsets.only(bottom: 20),
+        margin: EdgeInsets.only(top: 5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              'Doesnt have an account? ',
+              style: subtitleTextStyle.copyWith(
+                fontSize: 12,
+              ),
+            ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/sign-up');
@@ -280,6 +358,7 @@ class _SignInPageState extends State<SignInPage> {
                   height: defaultMargin,
                 ),
                 or(),
+                google(),
                 signup(),
               ],
             ),

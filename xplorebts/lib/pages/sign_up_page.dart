@@ -63,12 +63,28 @@ class _SignUpPageState extends State<SignUpPage> {
                 fontWeight: semiBold,
               ),
             ),
+            /*
             SizedBox(
               height: 2,
             ),
             Text(
               'Register ',
               style: subtitleTextStyle,
+            ),
+            */
+
+            Center(
+              child: Container(
+                width: 170,
+                height: 180,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/logo.png',
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
@@ -77,7 +93,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
     Widget nameInput() {
       return Container(
-        margin: EdgeInsets.only(top: 50),
+        margin: EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -331,7 +347,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/sign-in');
               },
               child: Text(
                 'Sign In',
