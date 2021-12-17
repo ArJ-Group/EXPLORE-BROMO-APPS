@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fios_app/models/cart_model.dart';
-import 'package:fios_app/providers/cart_provider.dart';
-import 'package:fios_app/theme.dart';
+import 'package:xplorebts/models/cart_model.dart';
+import 'package:xplorebts/providers/cart_provider.dart';
+import 'package:xplorebts/theme.dart';
 
 class CartCard extends StatelessWidget {
   final CartModel cart;
