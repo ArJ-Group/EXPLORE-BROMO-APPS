@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shamo_apps/providers/auth_provider.dart';
-import 'package:shamo_apps/theme.dart';
-import 'package:shamo_apps/widget/loading_button.dart';
+import 'package:xplorebts/providers/auth_provider.dart';
+import 'package:xplorebts/theme.dart';
+import 'package:xplorebts/widgets/loading_button.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -11,11 +11,8 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   TextEditingController nameController = TextEditingController(text: '');
-
   TextEditingController usernameController = TextEditingController(text: '');
-
   TextEditingController emailController = TextEditingController(text: '');
-
   TextEditingController passwordController = TextEditingController(text: '');
 
   bool isLoading = false;
@@ -30,17 +27,18 @@ class _SignUpPageState extends State<SignUpPage> {
       });
 
       if (await authProvider.register(
-          name: nameController.text,
-          username: usernameController.text,
-          email: emailController.text,
-          password: passwordController.text)) {
+        name: nameController.text,
+        username: usernameController.text,
+        email: emailController.text,
+        password: passwordController.text,
+      )) {
         Navigator.pushNamed(context, '/home');
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             backgroundColor: alertColor,
             content: Text(
-              'Register Gagal! Mohon cek kembali',
+              'Gagal Register!',
               textAlign: TextAlign.center,
             ),
           ),
@@ -60,24 +58,24 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Sign Up',
-              style: primaryTextStyle.copyWith(
+              style: blackTextStyle.copyWith(
                 fontSize: 24,
-                fontWeight: bold,
+                fontWeight: semiBold,
               ),
             ),
             SizedBox(
               height: 2,
             ),
             Text(
-              'Register and Happy Shoping',
-              style: thirdTextstyle.copyWith(fontSize: 14),
+              'Register To Continue ',
+              style: subtitleTextStyle,
             ),
           ],
         ),
       );
     }
 
-    Widget fullNameInput() {
+    Widget nameInput() {
       return Container(
         margin: EdgeInsets.only(top: 50),
         child: Column(
@@ -85,36 +83,43 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Full Name',
-              style:
-                  primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
             ),
-            SizedBox(height: 12),
+            SizedBox(
+              height: 12,
+            ),
             Container(
               height: 50,
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
-                  color: backgroundColor2,
-                  borderRadius: BorderRadius.circular(12)),
+                color: backgroundColor2,
+                borderRadius: BorderRadius.circular(12),
+              ),
               child: Center(
                 child: Row(
                   children: [
                     Image.asset(
-                      'assets/icon_full_name.png',
+                      'assets/icon_name.png',
                       width: 17,
                     ),
                     SizedBox(
                       width: 16,
                     ),
                     Expanded(
-                        child: TextFormField(
-                      controller: nameController,
-                      style: primaryTextStyle,
-                      decoration: InputDecoration.collapsed(
+                      child: TextFormField(
+                        style: primaryTextStyle,
+                        controller: nameController,
+                        decoration: InputDecoration.collapsed(
                           hintText: 'Your Full Name',
-                          hintStyle: thirdTextstyle),
-                    )),
+                          hintStyle: subtitleTextStyle,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -124,7 +129,7 @@ class _SignUpPageState extends State<SignUpPage> {
       );
     }
 
-    Widget userNameInput() {
+    Widget usernameInput() {
       return Container(
         margin: EdgeInsets.only(top: 20),
         child: Column(
@@ -132,18 +137,23 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Username',
-              style:
-                  primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
             ),
-            SizedBox(height: 12),
+            SizedBox(
+              height: 12,
+            ),
             Container(
               height: 50,
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
-                  color: backgroundColor2,
-                  borderRadius: BorderRadius.circular(12)),
+                color: backgroundColor2,
+                borderRadius: BorderRadius.circular(12),
+              ),
               child: Center(
                 child: Row(
                   children: [
@@ -155,13 +165,15 @@ class _SignUpPageState extends State<SignUpPage> {
                       width: 16,
                     ),
                     Expanded(
-                        child: TextFormField(
-                      controller: usernameController,
-                      style: primaryTextStyle,
-                      decoration: InputDecoration.collapsed(
-                          hintText: 'Your User Name',
-                          hintStyle: thirdTextstyle),
-                    )),
+                      child: TextFormField(
+                        style: primaryTextStyle,
+                        controller: usernameController,
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Your Username',
+                          hintStyle: subtitleTextStyle,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -179,18 +191,23 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Email Address',
-              style:
-                  primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
             ),
-            SizedBox(height: 12),
+            SizedBox(
+              height: 12,
+            ),
             Container(
               height: 50,
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
-                  color: backgroundColor2,
-                  borderRadius: BorderRadius.circular(12)),
+                color: backgroundColor2,
+                borderRadius: BorderRadius.circular(12),
+              ),
               child: Center(
                 child: Row(
                   children: [
@@ -202,13 +219,16 @@ class _SignUpPageState extends State<SignUpPage> {
                       width: 16,
                     ),
                     Expanded(
-                        child: TextFormField(
-                      controller: emailController,
-                      style: primaryTextStyle,
-                      decoration: InputDecoration.collapsed(
+                      child: TextFormField(
+                        style: primaryTextStyle,
+                        controller: emailController,
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration.collapsed(
                           hintText: 'Your Email Address',
-                          hintStyle: thirdTextstyle),
-                    )),
+                          hintStyle: subtitleTextStyle,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -226,18 +246,23 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Password',
-              style:
-                  primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: medium,
+              ),
             ),
-            SizedBox(height: 12),
+            SizedBox(
+              height: 12,
+            ),
             Container(
               height: 50,
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
-                  color: backgroundColor2,
-                  borderRadius: BorderRadius.circular(12)),
+                color: backgroundColor2,
+                borderRadius: BorderRadius.circular(12),
+              ),
               child: Center(
                 child: Row(
                   children: [
@@ -249,13 +274,16 @@ class _SignUpPageState extends State<SignUpPage> {
                       width: 16,
                     ),
                     Expanded(
-                        child: TextFormField(
-                      controller: passwordController,
-                      style: primaryTextStyle,
-                      obscureText: true,
-                      decoration: InputDecoration.collapsed(
-                          hintText: 'Your Password', hintStyle: thirdTextstyle),
-                    )),
+                      child: TextFormField(
+                        style: primaryTextStyle,
+                        obscureText: true,
+                        controller: passwordController,
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Your Password',
+                          hintStyle: subtitleTextStyle,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -273,12 +301,17 @@ class _SignUpPageState extends State<SignUpPage> {
         child: TextButton(
           onPressed: handleSignUp,
           style: TextButton.styleFrom(
-              backgroundColor: primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12))),
+            backgroundColor: primaryColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
           child: Text(
             'Sign Up',
-            style: primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+            style: primaryTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: medium,
+            ),
           ),
         ),
       );
@@ -286,24 +319,26 @@ class _SignUpPageState extends State<SignUpPage> {
 
     Widget footer() {
       return Container(
-        margin: EdgeInsets.only(
-          bottom: 30,
-        ),
+        margin: EdgeInsets.only(bottom: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Already have an account? ',
-              style: thirdTextstyle.copyWith(fontSize: 12),
+              style: subtitleTextStyle.copyWith(
+                fontSize: 12,
+              ),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/sign-in');
+                Navigator.pop(context);
               },
               child: Text(
                 'Sign In',
-                style:
-                    purpleTextstyle.copyWith(fontSize: 12, fontWeight: medium),
+                style: purpleTextStyle.copyWith(
+                  fontSize: 12,
+                  fontWeight: medium,
+                ),
               ),
             ),
           ],
@@ -312,24 +347,29 @@ class _SignUpPageState extends State<SignUpPage> {
     }
 
     return Scaffold(
-      backgroundColor: backgroundColor1,
-      resizeToAvoidBottomInset: false,
+      backgroundColor: backgroundColor6,
       body: SafeArea(
         child: Container(
-          //default margin
-          margin: EdgeInsets.symmetric(horizontal: defaultMargin),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              header(),
-              fullNameInput(),
-              userNameInput(),
-              emailInput(),
-              passwordInput(),
-              isLoading ? LoadingButton() : signUpButton(),
-              Spacer(),
-              footer(),
-            ],
+          margin: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+          ),
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                header(),
+                nameInput(),
+                usernameInput(),
+                emailInput(),
+                passwordInput(),
+                isLoading ? LoadingButton() : signUpButton(),
+                SizedBox(
+                  height: 40,
+                ),
+                footer(),
+              ],
+            ),
           ),
         ),
       ),

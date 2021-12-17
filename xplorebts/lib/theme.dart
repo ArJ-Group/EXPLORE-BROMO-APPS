@@ -25,12 +25,17 @@ TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: primaryTextColor,
 );
 
+
 TextStyle secondaryTextStyle = GoogleFonts.poppins(
   color: secondaryTextColor,
 );
 
 TextStyle subtitleTextStyle = GoogleFonts.poppins(
   color: subtitleColor,
+);
+
+TextStyle emailpass = GoogleFonts.poppins(
+  color: primaryTextColor,
 );
 
 TextStyle priceTextStyle = GoogleFonts.poppins(

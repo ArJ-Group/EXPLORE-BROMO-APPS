@@ -53,17 +53,33 @@ class _SignInPageState extends State<SignInPage> {
           children: [
             Text(
               'Login',
-              style: primaryTextStyle.copyWith(
+              style: blackTextStyle.copyWith(
                 fontSize: 24,
                 fontWeight: semiBold,
               ),
             ),
+            /*
             SizedBox(
               height: 2,
             ),
+            
             Text(
               'Sign In to Continue',
               style: subtitleTextStyle,
+            ),
+            */
+            Center(
+              child: Container(
+                width: 170,
+                height: 180,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/logo.png',
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
@@ -72,13 +88,13 @@ class _SignInPageState extends State<SignInPage> {
 
     Widget emailInput() {
       return Container(
-        margin: EdgeInsets.only(top: 70),
+        margin: EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Email Address',
-              style: primaryTextStyle.copyWith(
+              style: subtitleTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
               ),
@@ -92,7 +108,7 @@ class _SignInPageState extends State<SignInPage> {
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
-                color: backgroundColor2,
+                color: backgroundColor1,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Center(
@@ -112,7 +128,7 @@ class _SignInPageState extends State<SignInPage> {
                         controller: emailController,
                         decoration: InputDecoration.collapsed(
                           hintText: 'Your Email Address',
-                          hintStyle: subtitleTextStyle,
+                          hintStyle: emailpass,
                         ),
                       ),
                     ),
@@ -133,7 +149,7 @@ class _SignInPageState extends State<SignInPage> {
           children: [
             Text(
               'Password',
-              style: primaryTextStyle.copyWith(
+              style: subtitleTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
               ),
@@ -167,7 +183,7 @@ class _SignInPageState extends State<SignInPage> {
                         controller: passwordController,
                         decoration: InputDecoration.collapsed(
                           hintText: 'Your Password',
-                          hintStyle: subtitleTextStyle,
+                          hintStyle: emailpass,
                         ),
                       ),
                     ),
@@ -204,28 +220,16 @@ class _SignInPageState extends State<SignInPage> {
       );
     }
 
-    Widget footer() {
+    Widget or() {
       return Container(
         margin: EdgeInsets.only(bottom: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Don\'t have an account? ',
+              'OR',
               style: subtitleTextStyle.copyWith(
                 fontSize: 12,
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/sign-up');
-              },
-              child: Text(
-                'Sign Up',
-                style: purpleTextStyle.copyWith(
-                  fontSize: 12,
-                  fontWeight: medium,
-                ),
               ),
             ),
           ],
@@ -233,18 +237,12 @@ class _SignInPageState extends State<SignInPage> {
       );
     }
 
-    Widget others() {
+    Widget signup() {
       return Container(
-        margin: EdgeInsets.only(bottom: 20),
+        margin: EdgeInsets.only(bottom: 40),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'OR LOGIN WITH',
-              style: subtitleTextStyle.copyWith(
-                fontSize: 12,
-              ),
-            ),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/sign-up');
@@ -263,7 +261,7 @@ class _SignInPageState extends State<SignInPage> {
     }
 
     return Scaffold(
-      backgroundColor: backgroundColor1,
+      backgroundColor: backgroundColor6,
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
@@ -281,7 +279,8 @@ class _SignInPageState extends State<SignInPage> {
                 SizedBox(
                   height: defaultMargin,
                 ),
-                footer(),
+                or(),
+                signup(),
               ],
             ),
           ),
