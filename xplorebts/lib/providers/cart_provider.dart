@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fios_app/models/cart_model.dart';
-import 'package:fios_app/models/product_model.dart';
+import 'package:xplorebts/models/cart_model.dart';
+import 'package:xplorebts/models/product_model.dart';
 
 class CartProvider with ChangeNotifier {
   List<CartModel> _carts = [];
