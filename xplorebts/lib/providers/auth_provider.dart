@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:explore_bts/models/user_models.dart';
-import 'package:explore_bts/services/auth_service.dart';
+import 'package:xplorebts/models/user_model.dart';
+import 'package:xplorebts/services/auth_service.dart';
 
 class AuthProvider with ChangeNotifier {
-  late UserModel _user;
-  UserModel get user => _user;
+  UserModel? _user;
+
+  UserModel get user => _user!;
 
   set user(UserModel user) {
     _user = user;
     notifyListeners();
   }
 
-  Future<bool> register(
-      {String? name, String? username, String? email, String? password}) async {
+  Future<bool> register({
+    String? name,
+    String? username,
+    String? email,
+    String? password,
+  }) async {
     try {
       UserModel user = await AuthService().register(
-          name: name, username: username, email: email, password: password);
+        name: name,
+        username: username,
+        email: email,
+        password: password,
+      );
 
       _user = user;
       return true;
@@ -25,10 +34,15 @@ class AuthProvider with ChangeNotifier {
     }
   }
 
-  Future<bool> login({String? email, String? password}) async {
+  Future<bool> login({
+    String? email,
+    String? password,
+  }) async {
     try {
-      UserModel user =
-          await AuthService().login(email: email, password: password);
+      UserModel user = await AuthService().login(
+        email: email,
+        password: password,
+      );
 
       _user = user;
       return true;
