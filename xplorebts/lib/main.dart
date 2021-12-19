@@ -24,6 +24,7 @@ import 'pages/categories/Camping/camping.dart';
 import 'pages/categories/jeep/jeep.dart';
 import 'pages/categories/Inn/inn.dart';
 import 'pages/categories/Trip/trip.dart';
+import 'pages/categories/order/order.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,12 +55,12 @@ class MyApp extends StatelessWidget {
           '/cart': (context) => CartPage(),
           '/checkout': (context) => CheckoutPage(),
           '/checkout-success': (context) => CheckoutSuccessPage(),
-          //new 
+          //new
           '/camping': (context) => CampingPage(),
           '/jeep': (context) => JeepPage(),
           '/inn': (context) => InnPage(),
           '/trip': (context) => TripPage(),
-          '/orders': (context) => TripPage(),
+          '/orders': (context) => OrderPage(),
         },
       ),
     );
