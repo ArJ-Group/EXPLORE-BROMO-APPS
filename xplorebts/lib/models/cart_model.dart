@@ -1,9 +1,9 @@
 import 'package:xplorebts/models/product_model.dart';
 
 class CartModel {
-  int? id;
-  ProductModel? product;
-  int? quantity;
+  int id;
+  ProductModel product;
+  int quantity;
 
   CartModel({
     this.id,
@@ -27,6 +27,6 @@ class CartModel {
 
   // TODO: dapetin total price
   double getTotalPrice() {
-    return product!.price! * quantity!;
+    return product.price * quantity!;
   }
 }
