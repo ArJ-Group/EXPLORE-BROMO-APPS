@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/models/user_model.dart';
-import 'package:xplorebts/pages/categories/Camping/camping_card.dart';
+
 import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/providers/product_provider.dart';
 import 'package:xplorebts/theme.dart';
 //import 'package:xplorebts/widgets/product_card.dart';
 import 'package:xplorebts/widgets/product_tile.dart';
+
+//new catogoreiz
+import 'package:xplorebts/pages/categories/jeep/jeep_card.dart';
 
 class JeepHome extends StatelessWidget {
   @override
@@ -241,7 +244,7 @@ class JeepHome extends StatelessWidget {
               Row(
                 children: productProvider.products
                     .map(
-                      (product) => CampingCard(product),
+                      (product) => JeepCard(product),
                     )
                     .toList(),
               ),

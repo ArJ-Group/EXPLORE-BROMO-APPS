@@ -5,7 +5,7 @@ import 'package:xplorebts/pages/categories/Camping/camping_card.dart';
 import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/providers/product_provider.dart';
 import 'package:xplorebts/theme.dart';
-import 'package:xplorebts/widgets/product_card.dart';
+//import 'package:xplorebts/widgets/product_card.dart';
 import 'package:xplorebts/widgets/product_tile.dart';
 
 class CampingHome extends StatelessWidget {

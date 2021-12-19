@@ -25,6 +25,10 @@ TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: primaryTextColor,
 );
 
+TextStyle price = GoogleFonts.poppins(
+  color: backgroundColor6,
+);
+
 TextStyle headerNama = GoogleFonts.poppins(
   color: backgroundColor1,
 );

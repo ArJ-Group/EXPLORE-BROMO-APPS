@@ -4,10 +4,10 @@ import 'package:xplorebts/models/product_model.dart';
 import 'package:xplorebts/pages/product_page.dart';
 import 'package:xplorebts/theme.dart';
 
-class CampingCard extends StatelessWidget {
+class JeepCard extends StatelessWidget {
   final ProductModel product;
 
-  CampingCard(this.product);
+  JeepCard(this.product);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class CampingCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 3,
+                    height: 6,
                   ),
                   Text(
                     product.name!,
