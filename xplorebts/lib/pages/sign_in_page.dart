@@ -4,7 +4,7 @@ import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/theme.dart';
 import 'package:xplorebts/services/sign_in_firebase.dart';
 import 'package:xplorebts/widgets/loading_button.dart';
-import 'package:xplorebts/services/auth_firebase.dart';
+
 
 import 'package:xplorebts/pages/home/home_page.dart';
 

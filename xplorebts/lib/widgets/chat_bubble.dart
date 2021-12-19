@@ -6,7 +6,7 @@ import 'package:xplorebts/theme.dart';
 class ChatBubble extends StatelessWidget {
   final String text;
   final bool isSender;
-  final ProductModel? product;
+  final ProductModel product;
 
   ChatBubble({
     this.isSender = false,
@@ -37,7 +37,7 @@ class ChatBubble extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.network(
-                    product!.galleries![0].url!,
+                    product.galleries[0].url,
                     width: 70,
                   ),
                 ),
@@ -49,14 +49,14 @@ class ChatBubble extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        product!.name!,
+                        product.name,
                         style: primaryTextStyle,
                       ),
                       SizedBox(
                         height: 4,
                       ),
                       Text(
-                        '\$${product!.price}',
+                        '\$${product.price}',
                         style: priceTextStyle.copyWith(
                           fontWeight: medium,
                         ),
