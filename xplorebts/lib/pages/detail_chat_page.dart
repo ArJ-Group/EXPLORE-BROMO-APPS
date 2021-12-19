@@ -7,6 +7,7 @@ import 'package:xplorebts/services/message_service.dart';
 import 'package:xplorebts/theme.dart';
 import 'package:xplorebts/widgets/chat_bubble.dart';
 
+// ignore: must_be_immutable
 class DetailChatPage extends StatefulWidget {
   ProductModel product;
   DetailChatPage(this.product);
