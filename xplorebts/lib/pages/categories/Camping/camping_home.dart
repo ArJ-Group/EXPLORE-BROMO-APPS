@@ -7,6 +7,7 @@ import 'package:xplorebts/providers/product_provider.dart';
 import 'package:xplorebts/theme.dart';
 //import 'package:xplorebts/widgets/product_card.dart';
 import 'package:xplorebts/widgets/product_tile.dart';
+import 'package:xplorebts/pages/categories/Camping/camping_tile.dart';
 
 class CampingHome extends StatelessWidget {
   @override
@@ -276,7 +277,7 @@ class CampingHome extends StatelessWidget {
         child: Column(
           children: productProvider.products
               .map(
-                (product) => ProductTile(product),
+                (product) => CampingTile(product),
               )
               .toList(),
         ),
