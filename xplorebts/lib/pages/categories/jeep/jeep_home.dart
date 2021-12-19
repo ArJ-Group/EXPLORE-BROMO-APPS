@@ -6,10 +6,10 @@ import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/providers/product_provider.dart';
 import 'package:xplorebts/theme.dart';
 //import 'package:xplorebts/widgets/product_card.dart';
-import 'package:xplorebts/widgets/product_tile.dart';
 
 //new catogoreiz
 import 'package:xplorebts/pages/categories/jeep/jeep_card.dart';
+import 'package:xplorebts/pages/categories/jeep/jeep_tile.dart';
 
 class JeepHome extends StatelessWidget {
   @override
@@ -279,7 +279,7 @@ class JeepHome extends StatelessWidget {
         child: Column(
           children: productProvider.products
               .map(
-                (product) => ProductTile(product),
+                (product) => JeepTile(product),
               )
               .toList(),
         ),
