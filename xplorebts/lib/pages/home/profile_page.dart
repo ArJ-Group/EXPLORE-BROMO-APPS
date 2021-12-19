@@ -121,8 +121,13 @@ class ProfilePage extends StatelessWidget {
                   'Edit Profile',
                 ),
               ),
-              menuItem(
-                'Your Orders',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/orders');
+                },
+                child: menuItem(
+                  'Your Orders',
+                ),
               ),
               menuItem(
                 'Help',
