@@ -191,7 +191,7 @@ class HomePage extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'Popular Products',
+          'All Services',
           style: primaryTextStyle.copyWith(
             fontSize: 22,
             fontWeight: semiBold,
@@ -232,7 +232,7 @@ class HomePage extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'New Arrivals',
+          'New All Services',
           style: primaryTextStyle.copyWith(
             fontSize: 22,
             fontWeight: semiBold,

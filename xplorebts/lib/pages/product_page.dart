@@ -17,20 +17,20 @@ class ProductPage extends StatefulWidget {
 
 class _ProductPageState extends State<ProductPage> {
   List images = [
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
+    'assets/1.png',
+    'assets/1.png',
+    'assets/2.png',
   ];
 
   List familiarShoes = [
-    'assets/image_shoes.png',
-    'assets/image_shoes2.png',
-    'assets/image_shoes3.png',
-    'assets/image_shoes4.png',
-    'assets/image_shoes5.png',
-    'assets/image_shoes6.png',
-    'assets/image_shoes7.png',
-    'assets/image_shoes8.png',
+    'assets/1.png',
+    'assets/2.png',
+    'assets/3.png',
+    'assets/4.png',
+    'assets/5.png',
+    'assets/6.png',
+    'assets/7.png',
+    'assets/8.png',
   ];
 
   int currentIndex = 0;
@@ -370,7 +370,7 @@ class _ProductPageState extends State<ProductPage> {
                       horizontal: defaultMargin,
                     ),
                     child: Text(
-                      'Fimiliar Shoes',
+                      'Choose Jeep',
                       style: primaryTextStyle.copyWith(
                         fontWeight: medium,
                       ),
