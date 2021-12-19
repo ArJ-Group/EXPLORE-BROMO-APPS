@@ -1,5 +1,6 @@
-//  import 'package:firebase_core/firebase_core.dart';
-//  php artisan serve --host 172.25.176.1 --port 80
+// @dart=2.9
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,7 @@ import 'pages/categories/order/order.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
