@@ -46,7 +46,7 @@ class _DetailChatPageState extends State<DetailChatPage> {
           title: Row(
             children: [
               Image.asset(
-                'assets/image_shop_logo_online.png',
+                'assets/logo.png',
                 width: 50,
               ),
               SizedBox(
@@ -56,7 +56,7 @@ class _DetailChatPageState extends State<DetailChatPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Fios Store',
+                    'Bromo Travel',
                     style: primaryTextStyle.copyWith(
                       fontWeight: medium,
                       fontSize: 14,

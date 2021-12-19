@@ -6,7 +6,7 @@ import 'package:xplorebts/theme.dart';
 
 class ChatTile extends StatelessWidget {
   final MessageModel message;
-  
+
   ChatTile(this.message);
 
   @override
@@ -29,7 +29,7 @@ class ChatTile extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  'assets/image_shop_logo.png',
+                  'assets/logo.png',
                   width: 54,
                 ),
                 SizedBox(
@@ -40,7 +40,7 @@ class ChatTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Shoe Store',
+                        'Bromo Travel',
                         style: primaryTextStyle.copyWith(
                           fontSize: 15,
                         ),
