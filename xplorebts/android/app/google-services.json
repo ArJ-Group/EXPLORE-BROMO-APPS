@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "980640533004",
+    "project_id": "xplorebromo",
+    "storage_bucket": "xplorebromo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980640533004:android:bfa93d98f51c0809bb3c29",
+        "android_client_info": {
+          "package_name": "com.example.xplorebts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980640533004-3sq0ms090hlh33fak2eg16jckvg3jm83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.xplorebts",
+            "certificate_hash": "44baf10a8ef5d239448ed9ac437b2e8b4994dc4c"
+          }
+        },
+        {
+          "client_id": "980640533004-t9g3g2genni0ivcit4h78lvbtto2uv36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdsLZkWpxufUO2PsA--LHRQpvI0pe5AkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980640533004-t9g3g2genni0ivcit4h78lvbtto2uv36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
