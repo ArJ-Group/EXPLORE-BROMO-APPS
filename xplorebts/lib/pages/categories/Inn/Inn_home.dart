@@ -7,6 +7,8 @@ import 'package:xplorebts/providers/product_provider.dart';
 import 'package:xplorebts/theme.dart';
 //import 'package:xplorebts/widgets/product_card.dart';
 import 'package:xplorebts/widgets/product_tile.dart';
+import 'package:xplorebts/pages/categories/Inn/inn_tile.dart';
+import 'package:xplorebts/pages/categories/Inn/inn_card.dart';
 
 class InnHome extends StatelessWidget {
   @override
@@ -241,7 +243,7 @@ class InnHome extends StatelessWidget {
               Row(
                 children: productProvider.products
                     .map(
-                      (product) => CampingCard(product),
+                      (product) => InnCard(product),
                     )
                     .toList(),
               ),
@@ -276,7 +278,7 @@ class InnHome extends StatelessWidget {
         child: Column(
           children: productProvider.products
               .map(
-                (product) => ProductTile(product),
+                (product) => InnTile(product),
               )
               .toList(),
         ),
