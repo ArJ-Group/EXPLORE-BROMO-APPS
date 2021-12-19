@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/pages/home/chat_page.dart';
 //NEW PAGES
-import 'package:xplorebts/pages/categories/camping_home.dart';
+import 'package:xplorebts/pages/categories/Camping/camping_home.dart';
 import 'package:xplorebts/pages/home/profile_page.dart';
 import 'package:xplorebts/pages/home/wishlist_page.dart';
 import 'package:xplorebts/providers/page_provider.dart';

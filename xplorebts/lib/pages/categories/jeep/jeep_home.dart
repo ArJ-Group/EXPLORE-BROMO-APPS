@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/models/user_model.dart';
-import 'package:xplorebts/pages/categories/camping_card.dart';
+import 'package:xplorebts/pages/categories/Camping/camping_card.dart';
 import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/providers/product_provider.dart';
 import 'package:xplorebts/theme.dart';

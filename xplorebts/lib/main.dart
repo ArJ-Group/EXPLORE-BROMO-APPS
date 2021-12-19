@@ -20,7 +20,7 @@ import 'providers/wishlist_provider.dart';
 
 //new categories
 
-import 'pages/categories/camping.dart';
+import 'pages/categories/Camping/camping.dart';
 import 'pages/categories/jeep/jeep.dart';
 import 'pages/categories/Inn/inn.dart';
 import 'pages/categories/Trip/trip.dart';
