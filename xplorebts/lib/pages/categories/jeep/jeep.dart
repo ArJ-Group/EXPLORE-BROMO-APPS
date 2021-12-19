@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/pages/home/chat_page.dart';
-import 'package:xplorebts/pages/home/home_page.dart';
+//NEW PAGES
+import 'package:xplorebts/pages/categories/jeep/jeep_home.dart';
+
 import 'package:xplorebts/pages/home/profile_page.dart';
 import 'package:xplorebts/pages/home/wishlist_page.dart';
 import 'package:xplorebts/providers/page_provider.dart';
 import 'package:xplorebts/theme.dart';
 
-class MainPage extends StatefulWidget {
+class JeepPage extends StatefulWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  _JeepPageState createState() => _JeepPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _JeepPageState extends State<JeepPage> {
   @override
   Widget build(BuildContext context) {
     PageProvider pageProvider = Provider.of<PageProvider>(context);
@@ -113,7 +115,7 @@ class _MainPageState extends State<MainPage> {
     Widget body() {
       switch (pageProvider.currentIndex) {
         case 0:
-          return HomePage();
+          return JeepHome();
         case 1:
           return ChatPage();
         case 2:
@@ -122,14 +124,13 @@ class _MainPageState extends State<MainPage> {
           return ProfilePage();
 
         default:
-          return HomePage();
+          return JeepHome();
       }
     }
 
     return Scaffold(
-      //main baground colour
       backgroundColor:
-          pageProvider.currentIndex == 0 ? backgroundColor1 : backgroundColor3,
+          pageProvider.currentIndex == 0 ? backgroundColor6 : backgroundColor3,
       floatingActionButton: cartButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: customBottomNav(),

@@ -18,6 +18,11 @@ import 'providers/product_provider.dart';
 import 'providers/transaction_provider.dart';
 import 'providers/wishlist_provider.dart';
 
+//new categories
+
+import 'pages/categories/camping.dart';
+import 'pages/categories/jeep/jeep.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp();
@@ -47,6 +52,8 @@ class MyApp extends StatelessWidget {
           '/cart': (context) => CartPage(),
           '/checkout': (context) => CheckoutPage(),
           '/checkout-success': (context) => CheckoutSuccessPage(),
+          '/camping': (context) => CampingPage(),
+          '/jeep': (context) => JeepPage(),
         },
       ),
     );

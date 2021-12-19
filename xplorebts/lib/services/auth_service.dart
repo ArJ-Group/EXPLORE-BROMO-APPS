@@ -4,8 +4,12 @@ import 'package:xplorebts/models/user_model.dart';
 import 'package:http/http.dart' as http;
 
 class AuthService {
-  // String baseUrl = 'http://192.168.1.6/api'; rajen
-  String baseUrl = 'http://172.25.176.1/api';
+  // RJN BASE URL
+   String baseUrl = 'http://192.168.1.6/api';
+
+  //rio BASE URL
+  // String baseUrl = 'http://172.25.176.1/api'; 
+
   Future<UserModel> register({
     String? name,
     String? username,

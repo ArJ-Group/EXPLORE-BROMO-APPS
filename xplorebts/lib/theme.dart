@@ -25,6 +25,10 @@ TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: primaryTextColor,
 );
 
+TextStyle headerNama = GoogleFonts.poppins(
+  color: backgroundColor1,
+);
+
 TextStyle secondaryTextStyle = GoogleFonts.poppins(
   color: secondaryTextColor,
 );
