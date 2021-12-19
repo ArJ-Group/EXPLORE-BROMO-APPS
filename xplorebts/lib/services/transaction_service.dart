@@ -23,7 +23,7 @@ class TransactionService {
         'items': carts
             .map(
               (cart) => {
-                'id': cart.product!.id,
+                'id': cart.product.id,
                 'quantity': cart.quantity,
               },
             )

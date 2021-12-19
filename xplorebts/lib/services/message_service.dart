@@ -6,7 +6,7 @@ import 'package:xplorebts/models/user_model.dart';
 class MessageService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  Stream<List<MessageModel>> getMessagesByUserId({int? userId}) {
+  Stream<List<MessageModel>> getMessagesByUserId({int userId}) {
     try {
       return firestore
           .collection('messages')
@@ -20,7 +20,7 @@ class MessageService {
 
         result.sort(
           (MessageModel a, MessageModel b) =>
-              a.createdAt!.compareTo(b.createdAt!),
+              a.createdAt.compareTo(b.createdAt),
         );
 
         return result;
@@ -31,19 +31,18 @@ class MessageService {
   }
 
   Future<void> addMessage(
-      {UserModel? user,
-      bool? isFromUser,
-      String? message,
-      ProductModel? product}) async {
+      {UserModel user,
+      bool isFromUser,
+      String message,
+      ProductModel product}) async {
     try {
       firestore.collection('messages').add({
-        'userId': user!.id,
+        'userId': user.id,
         'userName': user.name,
         'userImage': user.profilePhotoUrl,
         'isFromUser': isFromUser,
         'message': message,
-        'product':
-            product is UninitializedProductModel ? {} : product!.toJson(),
+        'product': product is UninitializedProductModel ? {} : product.toJson(),
         'createdAt': DateTime.now().toString(),
         'updatedAt': DateTime.now().toString(),
       }).then(

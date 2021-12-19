@@ -20,13 +20,13 @@ class CartModel {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'product': product!.toJson(),
+      'product': product.toJson(),
       'quantity': quantity,
     };
   }
 
   // TODO: dapetin total price
   double getTotalPrice() {
-    return product.price * quantity!;
+    return product.price * quantity;
   }
 }

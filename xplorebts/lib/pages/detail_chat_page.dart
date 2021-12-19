@@ -95,7 +95,7 @@ class _DetailChatPageState extends State<DetailChatPage> {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.network(
-                widget.product.galleries![0].url!,
+                widget.product.galleries[0].url,
                 width: 54,
               ),
             ),
@@ -108,7 +108,7 @@ class _DetailChatPageState extends State<DetailChatPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    widget.product.name!,
+                    widget.product.name,
                     style: primaryTextStyle,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -204,10 +204,10 @@ class _DetailChatPageState extends State<DetailChatPage> {
                 padding: EdgeInsets.symmetric(
                   horizontal: defaultMargin,
                 ),
-                children: snapshot.data!
+                children: snapshot.data
                     .map((MessageModel message) => ChatBubble(
-                          isSender: message.isFromUser!,
-                          text: message.message!,
+                          isSender: message.isFromUser,
+                          text: message.message,
                           product: message.product,
                         ))
                     .toList(),

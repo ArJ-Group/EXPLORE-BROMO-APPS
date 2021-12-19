@@ -28,7 +28,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
       });
 
       if (await transactionProvider.checkout(
-        authProvider.user.token!,
+        authProvider.user.token,
         cartProvider.carts,
         cartProvider.totalPrice(),
       )) {

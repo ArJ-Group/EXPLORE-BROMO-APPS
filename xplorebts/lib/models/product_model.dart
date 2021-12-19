@@ -2,15 +2,15 @@ import 'package:xplorebts/models/category_model.dart';
 import 'package:xplorebts/models/gallery_model.dart';
 
 class ProductModel {
-  int? id;
-  String? name;
-  double? price;
-  String? description;
-  String? tags;
-  CategoryModel? category;
-  DateTime? createdAt;
-  DateTime? updatedAt;
-  List<GalleryModel>? galleries;
+  int id;
+  String name;
+  double price;
+  String description;
+  String tags;
+  CategoryModel category;
+  DateTime createdAt;
+  DateTime updatedAt;
+  List<GalleryModel> galleries;
 
   ProductModel({
     this.id,
@@ -45,8 +45,8 @@ class ProductModel {
       'price': price,
       'description': description,
       'tags': tags,
-      'category': category!.toJson(),
-      'galleries': galleries!.map((gallery) => gallery.toJson()).toList(),
+      'category': category.toJson(),
+      'galleries': galleries.map((gallery) => gallery.toJson()).toList(),
       'created_at': createdAt.toString(),
       'updated_at': updatedAt.toString(),
     };

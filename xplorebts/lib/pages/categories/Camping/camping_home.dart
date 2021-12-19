@@ -54,7 +54,7 @@ class CampingHome extends StatelessWidget {
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: NetworkImage(
-                    user.profilePhotoUrl!,
+                    user.profilePhotoUrl,
                   ),
                 ),
               ),

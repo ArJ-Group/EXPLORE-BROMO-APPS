@@ -1,14 +1,14 @@
 import 'package:xplorebts/models/product_model.dart';
 
 class MessageModel {
-  String? message;
-  int? userId;
-  String? userName;
-  String? userImage;
-  bool? isFromUser;
-  ProductModel? product;
-  DateTime? createdAt;
-  DateTime? updatedAt;
+  String message;
+  int userId;
+  String userName;
+  String userImage;
+  bool isFromUser;
+  ProductModel product;
+  DateTime createdAt;
+  DateTime updatedAt;
 
   MessageModel({
     this.message,
@@ -41,7 +41,7 @@ class MessageModel {
       'userName': userName,
       'userImage': userImage,
       'isFromUser': isFromUser,
-      'product': product is UninitializedProductModel ? {} : product!.toJson(),
+      'product': product is UninitializedProductModel ? {} : product.toJson(),
       'createdAt': createdAt.toString(),
       'updatedAt': updatedAt.toString(),
     };

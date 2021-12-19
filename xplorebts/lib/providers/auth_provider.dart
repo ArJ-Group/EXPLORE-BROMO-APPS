@@ -3,9 +3,9 @@ import 'package:xplorebts/models/user_model.dart';
 import 'package:xplorebts/services/auth_service.dart';
 
 class AuthProvider with ChangeNotifier {
-  UserModel? _user;
+  UserModel _user;
 
-  UserModel get user => _user!;
+  UserModel get user => _user;
 
   set user(UserModel user) {
     _user = user;
@@ -13,10 +13,10 @@ class AuthProvider with ChangeNotifier {
   }
 
   Future<bool> register({
-    String? name,
-    String? username,
-    String? email,
-    String? password,
+    String name,
+    String username,
+    String email,
+    String password,
   }) async {
     try {
       UserModel user = await AuthService().register(
@@ -35,8 +35,8 @@ class AuthProvider with ChangeNotifier {
   }
 
   Future<bool> login({
-    String? email,
-    String? password,
+    String email,
+    String password,
   }) async {
     try {
       UserModel user = await AuthService().login(

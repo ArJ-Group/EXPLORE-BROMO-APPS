@@ -99,7 +99,7 @@ class ChatPage extends StatelessWidget {
               .getMessagesByUserId(userId: authProvider.user.id),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              if (snapshot.data!.length == 0) {
+              if (snapshot.data.length == 0) {
                 return emptyChat();
               }
 
@@ -112,7 +112,7 @@ class ChatPage extends StatelessWidget {
                       horizontal: defaultMargin,
                     ),
                     children: [
-                      ChatTile(snapshot.data![snapshot.data!.length - 1]),
+                      ChatTile(snapshot.data[snapshot.data.length - 1]),
                     ],
                   ),
                 ),

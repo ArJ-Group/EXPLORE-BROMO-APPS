@@ -37,7 +37,7 @@ class InnCard extends StatelessWidget {
               height: 30,
             ),
             Image.network(
-              product.galleries![0].url!,
+              product.galleries[0].url,
               width: 215,
               height: 150,
               fit: BoxFit.cover,
@@ -50,7 +50,7 @@ class InnCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    product.category!.name!,
+                    product.category.name,
                     style: price.copyWith(
                       fontSize: 12,
                     ),
@@ -59,7 +59,7 @@ class InnCard extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    product.name!,
+                    product.name,
                     style: blackTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: semiBold,

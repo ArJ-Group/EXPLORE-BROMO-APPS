@@ -1,10 +1,10 @@
 class UserModel {
-  int? id;
-  String? name;
-  String? email;
-  String? username;
-  String? profilePhotoUrl;
-  String? token;
+  int id;
+  String name;
+  String email;
+  String username;
+  String profilePhotoUrl;
+  String token;
 
   UserModel({
     this.id,

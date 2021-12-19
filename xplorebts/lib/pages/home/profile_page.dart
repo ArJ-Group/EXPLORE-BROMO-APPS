@@ -25,7 +25,7 @@ class ProfilePage extends StatelessWidget {
               children: [
                 ClipOval(
                   child: Image.network(
-                    user.profilePhotoUrl!,
+                    user.profilePhotoUrl,
                     width: 64,
                   ),
                 ),
