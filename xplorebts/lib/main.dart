@@ -22,6 +22,8 @@ import 'providers/wishlist_provider.dart';
 
 import 'pages/categories/camping.dart';
 import 'pages/categories/jeep/jeep.dart';
+import 'pages/categories/Inn/inn.dart';
+import 'pages/categories/Trip/trip.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,6 +56,8 @@ class MyApp extends StatelessWidget {
           '/checkout-success': (context) => CheckoutSuccessPage(),
           '/camping': (context) => CampingPage(),
           '/jeep': (context) => JeepPage(),
+          '/inn': (context) => InnPage(),
+          '/trip': (context) => TripPage(),
         },
       ),
     );

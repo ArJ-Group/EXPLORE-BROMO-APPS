@@ -152,45 +152,55 @@ class JeepHome extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 10,
-                ),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: subtitleColor,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/inn');
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 10,
                   ),
-                  color: transparentColor,
-                ),
-                child: Text(
-                  'Inn',
-                  style: subtitleTextStyle.copyWith(
-                    fontSize: 13,
-                    fontWeight: medium,
+                  margin: EdgeInsets.only(right: 16),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: subtitleColor,
+                    ),
+                    color: transparentColor,
+                  ),
+                  child: Text(
+                    'Inn',
+                    style: subtitleTextStyle.copyWith(
+                      fontSize: 13,
+                      fontWeight: medium,
+                    ),
                   ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 10,
-                ),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: subtitleColor,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/trip');
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 10,
                   ),
-                  color: transparentColor,
-                ),
-                child: Text(
-                  'Trip',
-                  style: subtitleTextStyle.copyWith(
-                    fontSize: 13,
-                    fontWeight: medium,
+                  margin: EdgeInsets.only(right: 16),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: subtitleColor,
+                    ),
+                    color: transparentColor,
+                  ),
+                  child: Text(
+                    'Trip',
+                    style: subtitleTextStyle.copyWith(
+                      fontSize: 13,
+                      fontWeight: medium,
+                    ),
                   ),
                 ),
               ),
