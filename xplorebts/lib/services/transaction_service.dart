@@ -3,12 +3,11 @@ import 'package:http/http.dart' as http;
 import '../models/cart_model.dart';
 
 class TransactionService {
-  
   // RJN BASE URL
-   String baseUrl = 'http://192.168.1.6/api';
+  String baseUrl = 'http://192.168.1.6/api';
 
   //rio BASE URL
-  // String baseUrl = 'http://172.25.176.1/api'; 
+  // String baseUrl = 'http://172.25.176.1/api';
 
   Future<bool> checkout(
       String token, List<CartModel> carts, double totalPrice) async {
