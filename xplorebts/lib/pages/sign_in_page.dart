@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xplorebts/providers/auth_provider.dart';
 import 'package:xplorebts/theme.dart';
-//import 'package:xplorebts/services/sign_in_firebase.dart';
+import 'package:xplorebts/services/sign_in_firebase.dart';
 import 'package:xplorebts/widgets/loading_button.dart';
-//import 'package:xplorebts/services/auth_firebase.dart';
+import 'package:xplorebts/services/auth_firebase.dart';
+
+import 'package:xplorebts/pages/home/home_page.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -270,12 +272,12 @@ class _SignInPageState extends State<SignInPage> {
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
               color: alertColor,
               onPressed: () {
-                SignInPage().then((result) {
+                signInWithGoogle().then((result) {
                   if (result != null) {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return SignInPage();
+                          return HomePage();
                         },
                       ),
                     );
