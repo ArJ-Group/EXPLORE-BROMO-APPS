@@ -10,7 +10,10 @@ class ProductService {
   //String baseUrl = 'http://172.25.176.1/api';
 
   //ALIF BASE URL
-  String baseUrl = 'http://192.168.1.20/api';
+  // String baseUrl = 'http://192.168.1.20/api';
+
+  //Myud BASE URL
+  String baseUrl = 'http://192.168.1.9/api';
 
   Future<List<ProductModel>> getProducts() async {
     var url = '$baseUrl/products';
