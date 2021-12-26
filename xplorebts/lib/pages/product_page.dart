@@ -266,7 +266,7 @@ class _ProductPageState extends State<ProductPage> {
                           SnackBar(
                             backgroundColor: secondaryColor,
                             content: Text(
-                              'Has been added to the Wishlist',
+                              'Item has been added to the Wishlist',
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -276,7 +276,7 @@ class _ProductPageState extends State<ProductPage> {
                           SnackBar(
                             backgroundColor: alertColor,
                             content: Text(
-                              'Has been removed from the Wishlist',
+                              'Item has been removed from the Wishlist',
                               textAlign: TextAlign.center,
                             ),
                           ),

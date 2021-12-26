@@ -38,7 +38,7 @@ class CheckoutSuccessPage extends StatelessWidget {
               height: 12,
             ),
             Text(
-              'Stay at home while we\nprepare your dream shoes',
+              'Stay at home while we\nprepare your camping needs',
               style: secondaryTextStyle,
               textAlign: TextAlign.center,
             ),
@@ -60,7 +60,7 @@ class CheckoutSuccessPage extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'Order Other Shoes',
+                  'Order Other Product',
                   style: primaryTextStyle.copyWith(
                     fontSize: 16,
                     fontWeight: medium,
@@ -75,7 +75,9 @@ class CheckoutSuccessPage extends StatelessWidget {
                 top: 12,
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: Color(0xff39374B),
                   shape: RoundedRectangleBorder(

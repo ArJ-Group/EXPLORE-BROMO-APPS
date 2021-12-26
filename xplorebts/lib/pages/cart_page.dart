@@ -43,7 +43,7 @@ class CartPage extends StatelessWidget {
               height: 12,
             ),
             Text(
-              'Let\'s find your favorite shoes',
+              'Let\'s find your favorite product!',
               style: secondaryTextStyle,
             ),
             Container(
