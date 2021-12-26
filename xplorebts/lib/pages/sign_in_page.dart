@@ -5,7 +5,6 @@ import 'package:xplorebts/theme.dart';
 import 'package:xplorebts/services/sign_in_firebase.dart';
 import 'package:xplorebts/widgets/loading_button.dart';
 
-
 import 'package:xplorebts/pages/home/home_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -41,7 +40,7 @@ class _SignInPageState extends State<SignInPage> {
           SnackBar(
             backgroundColor: alertColor,
             content: Text(
-              'Gagal Login!',
+              'Failed to Login!',
               textAlign: TextAlign.center,
             ),
           ),

@@ -14,7 +14,7 @@ class AuthService {
   // String baseUrl = 'http://192.168.1.20/api';
 
   //Myud BASE URL
-  String baseUrl = 'http://192.168.1.9/api';
+  String baseUrl = 'http://192.168.0.187/api';
 
   Future<UserModel> register({
     String name,
