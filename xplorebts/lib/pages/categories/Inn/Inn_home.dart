@@ -220,7 +220,7 @@ class InnHome extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'All Jeep',
+          'Resort',
           style: headerNama.copyWith(
             fontSize: 22,
             fontWeight: semiBold,
@@ -261,7 +261,7 @@ class InnHome extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'All Jeep List',
+          'All Resort List',
           style: headerNama.copyWith(
             fontSize: 22,
             fontWeight: semiBold,

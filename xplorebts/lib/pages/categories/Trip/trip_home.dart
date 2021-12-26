@@ -219,7 +219,7 @@ class TripHome extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'Camping Tools',
+          'Trip',
           style: headerNama.copyWith(
             fontSize: 22,
             fontWeight: semiBold,
@@ -260,7 +260,7 @@ class TripHome extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'All Camping Tools',
+          'All Trip List',
           style: headerNama.copyWith(
             fontSize: 22,
             fontWeight: semiBold,

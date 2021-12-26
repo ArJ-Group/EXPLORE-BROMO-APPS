@@ -11,7 +11,7 @@ Color priceColor = Color(0xffE6A826);
 Color backgroundColor1 = Color(0xff4D2914);
 Color backgroundColor2 = Color(0xff733D1E);
 Color backgroundColor3 = Color(0xff66361B);
-Color backgroundColor4 = Color(0xffB35F2E);
+Color backgroundColor4 = Color(0xffB35017);
 Color backgroundColor5 = Color(0xffF2813F);
 Color backgroundColor6 = Color(0xffEBCBAB);
 

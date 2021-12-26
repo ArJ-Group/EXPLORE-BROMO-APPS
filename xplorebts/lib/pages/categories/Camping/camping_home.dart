@@ -260,7 +260,7 @@ class CampingHome extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'All Camping Tools',
+          'All Camping Tools List',
           style: headerNama.copyWith(
             fontSize: 22,
             fontWeight: semiBold,

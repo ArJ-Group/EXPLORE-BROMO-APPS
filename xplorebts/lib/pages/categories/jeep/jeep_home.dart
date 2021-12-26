@@ -221,7 +221,7 @@ class JeepHome extends StatelessWidget {
           right: defaultMargin,
         ),
         child: Text(
-          'All Jeep',
+          'Jeep',
           style: headerNama.copyWith(
             fontSize: 22,
             fontWeight: semiBold,
