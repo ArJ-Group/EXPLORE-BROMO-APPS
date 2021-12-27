@@ -1,6 +1,6 @@
 // @dart=2.9
 // php artisan serve --host 192.168.1.6 --port 80 ( RAJEN )
-// php artisan serve --host 172.25.176.1 --port 80 ( RIO )
+// php artisan serve --host 172.24.0.1 --port 80 ( RIO )
 // php artisan serve --host 192.168.1.20 --port 80 ( ALIF )
 
 import 'package:firebase_core/firebase_core.dart';
@@ -32,7 +32,9 @@ import 'pages/categories/order/order.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   //await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 

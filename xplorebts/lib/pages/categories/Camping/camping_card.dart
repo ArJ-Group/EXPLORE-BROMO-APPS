@@ -45,6 +45,7 @@ class CampingCard extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 20,
+                vertical: 10,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

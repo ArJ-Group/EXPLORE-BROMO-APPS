@@ -7,13 +7,13 @@ class TransactionService {
   String baseUrl = 'http://192.168.1.4/api';
 
   //rio BASE URL
-  // String baseUrl = 'http://172.25.176.1/api';
+  // String baseUrl = 'http://172.24.0.1/api';
 
   //ALIF BASE URL
   // String baseUrl = 'http://192.168.1.20/api';
 
   //Myud BASE URL
-  //String baseUrl = 'http://192.168.1.9/api';
+  String baseUrl = 'http://192.168.0.187/api';
 
   Future<bool> checkout(
       String token, List<CartModel> carts, double totalPrice) async {

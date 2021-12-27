@@ -140,7 +140,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                           ),
                         ),
                         Text(
-                          'Adidas Core',
+                          'ExploreBTS Store',
                           style: primaryTextStyle.copyWith(
                             fontWeight: medium,
                           ),
@@ -156,7 +156,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                           ),
                         ),
                         Text(
-                          'Marsemoon',
+                          'Soekarno Hatta',
                           style: primaryTextStyle.copyWith(
                             fontWeight: medium,
                           ),

@@ -17,7 +17,7 @@ class WishlistPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Favorite Shoes',
+          'Your Wishlist',
         ),
         elevation: 0,
         automaticallyImplyLeading: false,
@@ -40,7 +40,7 @@ class WishlistPage extends StatelessWidget {
                 height: 23,
               ),
               Text(
-                ' You don\'t have dream shoes?',
+                ' You don\'t have favorite product?',
                 style: primaryTextStyle.copyWith(
                   fontSize: 16,
                   fontWeight: medium,
@@ -50,7 +50,7 @@ class WishlistPage extends StatelessWidget {
                 height: 12,
               ),
               Text(
-                'Let\'s find your favorite shoes',
+                'Let\'s explore all our products!',
                 style: secondaryTextStyle,
               ),
               SizedBox(

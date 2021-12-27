@@ -3,21 +3,21 @@ import 'package:google_fonts/google_fonts.dart';
 
 double defaultMargin = 30.0;
 
-Color primaryColor = Color(0xff6C5ECF);
-Color secondaryColor = Color(0xff38ABBE);
+Color primaryColor = Color(0xffE6793C);
+Color secondaryColor = Color(0xffD67C49);
 Color alertColor = Color(0xffED6363);
-Color priceColor = Color(0xff2C96F1);
+Color priceColor = Color(0xffE6A826);
 
-Color backgroundColor1 = Color(0xff1F1D2B);
-Color backgroundColor2 = Color(0xff2B2937);
-Color backgroundColor3 = Color(0xff242231);
-Color backgroundColor4 = Color(0xff252836);
-Color backgroundColor5 = Color(0xff2B2844);
-Color backgroundColor6 = Color(0xffECEDEF);
+Color backgroundColor1 = Color(0xff4D2914);
+Color backgroundColor2 = Color(0xff733D1E);
+Color backgroundColor3 = Color(0xff66361B);
+Color backgroundColor4 = Color(0xffB35017);
+Color backgroundColor5 = Color(0xffF2813F);
+Color backgroundColor6 = Color(0xffEBCBAB);
 
 Color primaryTextColor = Color(0xffF1F0F2);
-Color secondaryTextColor = Color(0xff999999);
-Color subtitleColor = Color(0xff504F5E);
+Color secondaryTextColor = Color(0xff6b6b6b);
+Color subtitleColor = Color(0xff61524A);
 Color transparentColor = Colors.transparent;
 Color blackColor = Color(0xff2E2E2E);
 
