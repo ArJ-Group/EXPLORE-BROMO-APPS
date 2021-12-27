@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class AuthService {
   // RJN BASE URL
-  //String baseUrl = 'http://192.168.1.6/api';
+  String baseUrl = 'http://192.168.1.4/api';
 
   //rio BASE URL
   // String baseUrl = 'http:/172.24.0.1/api';
