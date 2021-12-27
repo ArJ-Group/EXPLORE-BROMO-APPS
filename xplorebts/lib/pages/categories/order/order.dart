@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:xplorebts/pages/categories/order/order_home.dart';
 import 'package:xplorebts/pages/home/chat_page.dart';
 //NEW PAGES
 import 'package:xplorebts/pages/categories/jeep/jeep_home.dart';
@@ -113,19 +114,7 @@ class _OrderPageState extends State<OrderPage> {
     }
 
     Widget body() {
-      switch (pageProvider.currentIndex) {
-        case 0:
-          return JeepHome();
-        case 1:
-          return ChatPage();
-        case 2:
-          return WishlistPage();
-        case 3:
-          return ProfilePage();
-
-        default:
-          return JeepHome();
-      }
+      return OrderHome();
     }
 
     return Scaffold(

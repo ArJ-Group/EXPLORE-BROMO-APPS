@@ -13,7 +13,7 @@ class TransactionService {
   // String baseUrl = 'http://192.168.1.20/api';
 
   //Myud BASE URL
-  String baseUrl = 'http://192.168.0.187/api';
+  String baseUrl = 'http://192.168.0.186/api';
 
   Future<bool> checkout(
       String token, List<CartModel> carts, double totalPrice) async {
@@ -51,7 +51,7 @@ class TransactionService {
     if (response.statusCode == 200) {
       return true;
     } else {
-      throw Exception('Gagal Melakukan Checkout!');
+      throw Exception('Checkout Failed!');
     }
   }
 }

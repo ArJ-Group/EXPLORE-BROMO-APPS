@@ -14,7 +14,7 @@ class AuthService {
   // String baseUrl = 'http://192.168.1.20/api';
 
   //Myud BASE URL
-  String baseUrl = 'http://192.168.0.187/api';
+  String baseUrl = 'http://192.168.0.186/api';
 
   Future<UserModel> register({
     String name,
@@ -76,7 +76,7 @@ class AuthService {
 
       return user;
     } else {
-      throw Exception('Gagal Login');
+      throw Exception('Failed to Login');
     }
   }
 }

@@ -13,7 +13,7 @@ class ProductService {
   // String baseUrl = 'http://192.168.1.20/api';
 
   //Myud BASE URL
-  String baseUrl = 'http://192.168.0.187/api';
+  String baseUrl = 'http://192.168.0.186/api';
 
   Future<List<ProductModel>> getProducts() async {
     var url = '$baseUrl/products';
@@ -33,7 +33,7 @@ class ProductService {
 
       return products;
     } else {
-      throw Exception('Gagal Get Products!');
+      throw Exception('Failed to Get Products!');
     }
   }
 }
