@@ -4,7 +4,7 @@ import '../models/cart_model.dart';
 
 class TransactionService {
   // RJN BASE URL
-  String baseUrl = 'http://192.168.1.4/api';
+  // String baseUrl = 'http://192.168.1.4/api';
 
   //rio BASE URL
   // String baseUrl = 'http://172.24.0.1/api';
@@ -14,6 +14,9 @@ class TransactionService {
 
   //Myud BASE URL
   String baseUrl = 'http://192.168.0.186/api';
+
+  //Hosted BASE URL
+  // String baseUrl = 'https://xplorebromo.ceban-app.com/api';
 
   Future<bool> checkout(
       String token, List<CartModel> carts, double totalPrice) async {
