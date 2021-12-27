@@ -13,10 +13,10 @@ class ProductService {
   // String baseUrl = 'http://192.168.1.20/api';
 
   //Myud BASE URL
-  String baseUrl = 'http://192.168.0.186/api';
+  //String baseUrl = 'http://192.168.0.186/api';
 
   //Hosted BASE URL
-  // String baseUrl = 'https://xplorebromo.ceban-app.com/api';
+  String baseUrl = 'https://xplorebromo.ceban-app.com/api';
 
   Future<List<ProductModel>> getProducts() async {
     var url = '$baseUrl/products';
