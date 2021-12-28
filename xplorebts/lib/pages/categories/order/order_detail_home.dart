@@ -14,66 +14,9 @@ class OrderDetailHome extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Your Order',
+          'Your Order Details',
         ),
         elevation: 0,
-      );
-    }
-
-    Widget emptyOrder() {
-      return Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/icon_empty_cart.png',
-              width: 80,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Opss! You dont have\nany order',
-              style: primaryTextStyle.copyWith(
-                fontSize: 16,
-                fontWeight: medium,
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Text(
-              'Let\'s order something!',
-              style: secondaryTextStyle,
-            ),
-            Container(
-              width: 154,
-              height: 44,
-              margin: EdgeInsets.only(
-                top: 20,
-              ),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/home', (route) => false);
-                },
-                style: TextButton.styleFrom(
-                  backgroundColor: primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: Text(
-                  'Explore Store',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
       );
     }
 
@@ -89,9 +32,6 @@ class OrderDetailHome extends StatelessWidget {
         //     .toList(),
         children: [
           new GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/order-detail');
-            },
             child: Container(
               margin: EdgeInsets.only(
                 top: defaultMargin,
@@ -107,46 +47,134 @@ class OrderDetailHome extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            image: DecorationImage(
-                              image: AssetImage('assets/logo.png'),
-                            )
-                            //             Image.asset(
-                            //   'assets/icon_empty_cart.png',
-                            //   width: 80,
-                            // ),
-                            // image: DecorationImage(
-                            //     // image: NetworkImage(
-                            //     //   // cart.product.galleries[0].url,
-                            //     // ),
-                            //     ),
-                            ),
+                      Text(
+                        "Name",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
                       ),
-                      SizedBox(
-                        width: 12,
+                      Text(
+                        "Rajendra",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
                       ),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              // cart.product.name,
-                              "Tent",
-                              style: primaryTextStyle.copyWith(
-                                fontWeight: semiBold,
-                              ),
-                            ),
-                            Text(
-                              "\$500",
-                              // '\$${cart.product.price}',
-                              style: priceTextStyle,
-                            ),
-                          ],
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Email",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                      Text(
+                        "rajendra.rakha29@gmail.com",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Address",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                      Text(
+                        "Marsemoon",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Payment",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                      Text(
+                        "MANUAL",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Total Price",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                      Text(
+                        "550",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Shipping Price",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                      Text(
+                        "0",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Status",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                      Text(
+                        "SUCCESS",
+                        style: secondaryTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
                         ),
                       ),
                     ],
@@ -155,7 +183,6 @@ class OrderDetailHome extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 5),
         ],
       );
     }
