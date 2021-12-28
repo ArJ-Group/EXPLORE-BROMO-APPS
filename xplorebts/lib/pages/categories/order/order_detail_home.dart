@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:xplorebts/theme.dart';
 // import 'package:xplorebts/widgets/cart_card.dart';
 
-class OrderHome extends StatelessWidget {
+class OrderDetailHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // CartProvider cartProvider = Provider.of<CartProvider>(context);
@@ -90,7 +90,7 @@ class OrderHome extends StatelessWidget {
         children: [
           new GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, '/order-details');
+              Navigator.pushNamed(context, '/order-detail');
             },
             child: Container(
               margin: EdgeInsets.only(

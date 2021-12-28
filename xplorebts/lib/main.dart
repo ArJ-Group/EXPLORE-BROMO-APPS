@@ -29,6 +29,7 @@ import 'pages/categories/jeep/jeep.dart';
 import 'pages/categories/Inn/inn.dart';
 import 'pages/categories/Trip/trip.dart';
 import 'pages/categories/order/order.dart';
+import 'pages/categories/order/order_detail.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
           '/inn': (context) => InnPage(),
           '/trip': (context) => TripPage(),
           '/orders': (context) => OrderPage(),
+          '/order-details': (context) => OrderDetailPage(),
         },
       ),
     );

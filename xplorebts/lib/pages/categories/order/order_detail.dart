@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:xplorebts/pages/categories/order/order_home.dart';
+import 'package:xplorebts/pages/categories/order/order_detail_home.dart';
 import 'package:xplorebts/pages/home/chat_page.dart';
 //NEW PAGES
 import 'package:xplorebts/pages/categories/jeep/jeep_home.dart';
@@ -10,12 +10,12 @@ import 'package:xplorebts/pages/home/wishlist_page.dart';
 import 'package:xplorebts/providers/page_provider.dart';
 import 'package:xplorebts/theme.dart';
 
-class OrderPage extends StatefulWidget {
+class OrderDetailPage extends StatefulWidget {
   @override
-  _OrderPageState createState() => _OrderPageState();
+  _OrderDetailPageState createState() => _OrderDetailPageState();
 }
 
-class _OrderPageState extends State<OrderPage> {
+class _OrderDetailPageState extends State<OrderDetailPage> {
   @override
   Widget build(BuildContext context) {
     PageProvider pageProvider = Provider.of<PageProvider>(context);
@@ -113,7 +113,7 @@ class _OrderPageState extends State<OrderPage> {
     }
 
     Widget body() {
-      return OrderHome();
+      return OrderDetailHome();
     }
 
     return Scaffold(
