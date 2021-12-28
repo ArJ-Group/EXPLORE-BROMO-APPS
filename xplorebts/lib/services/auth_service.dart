@@ -4,18 +4,6 @@ import 'package:xplorebts/models/user_model.dart';
 import 'package:http/http.dart' as http;
 
 class AuthService {
-  // RJN BASE URL
-  // String baseUrl = 'http://192.168.1.4/api';
-
-  //rio BASE URL
-  // String baseUrl = 'http:/172.24.0.1/api';
-
-  //ALIF BASE URL
-  // String baseUrl = 'http://192.168.1.20/api';
-
-  //Myud BASE URL
-  // String baseUrl = 'http://192.168.0.186/api';
-
   //Hosted BASE URL
   String baseUrl = 'https://xplorebromo.ceban-app.com/api';
 
