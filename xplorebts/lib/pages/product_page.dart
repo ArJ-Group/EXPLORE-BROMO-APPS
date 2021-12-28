@@ -228,7 +228,6 @@ class _ProductPageState extends State<ProductPage> {
         ),
         child: Column(
           children: [
-            // TODO: HEADER
             Container(
               margin: EdgeInsets.only(
                 top: defaultMargin,
@@ -294,7 +293,6 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
 
-            // TODO: PRICE
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
@@ -325,7 +323,6 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
 
-            // TODO: DESCRIPTION
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
@@ -356,7 +353,6 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
 
-            // TODO: FAMILIAR SHOES
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(

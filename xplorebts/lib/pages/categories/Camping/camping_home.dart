@@ -30,7 +30,7 @@ class CampingHome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hallo, ${user.name}',
+                    'Hi, ${user.name}',
                     style: headerNama.copyWith(
                       fontSize: 24,
                       fontWeight: semiBold,

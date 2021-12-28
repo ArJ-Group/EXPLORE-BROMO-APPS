@@ -37,7 +37,7 @@ class ProfilePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Hallo, ${user.name}',
+                        'Hi, ${user.name}',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: primaryTextStyle.copyWith(
