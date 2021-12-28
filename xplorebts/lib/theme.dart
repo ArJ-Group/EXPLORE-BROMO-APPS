@@ -21,43 +21,43 @@ Color subtitleColor = Color(0xff7A695F);
 Color transparentColor = Colors.transparent;
 Color blackColor = Color(0xff2E2E2E);
 
-TextStyle primaryTextStyle = GoogleFonts.poppins(
+TextStyle primaryTextStyle = GoogleFonts.montserrat(
   color: primaryTextColor,
 );
 
-TextStyle price = GoogleFonts.poppins(
+TextStyle price = GoogleFonts.montserrat(
   color: backgroundColor6,
 );
 
-TextStyle headerNama = GoogleFonts.poppins(
+TextStyle headerNama = GoogleFonts.montserrat(
   color: backgroundColor1,
 );
 
-TextStyle secondaryTextStyle = GoogleFonts.poppins(
+TextStyle secondaryTextStyle = GoogleFonts.montserrat(
   color: secondaryTextColor,
 );
 
-TextStyle subtitleTextStyle = GoogleFonts.poppins(
+TextStyle subtitleTextStyle = GoogleFonts.montserrat(
   color: subtitleColor,
 );
 
-TextStyle emailpass = GoogleFonts.poppins(
+TextStyle emailpass = GoogleFonts.montserrat(
   color: secondaryTextColor,
 );
 
-TextStyle priceTextStyle = GoogleFonts.poppins(
+TextStyle priceTextStyle = GoogleFonts.montserrat(
   color: priceColor,
 );
 
-TextStyle purpleTextStyle = GoogleFonts.poppins(
+TextStyle purpleTextStyle = GoogleFonts.montserrat(
   color: primaryColor,
 );
 
-TextStyle blackTextStyle = GoogleFonts.poppins(
+TextStyle blackTextStyle = GoogleFonts.montserrat(
   color: blackColor,
 );
 
-TextStyle alertTextStyle = GoogleFonts.poppins(
+TextStyle alertTextStyle = GoogleFonts.montserrat(
   color: alertColor,
 );
 
