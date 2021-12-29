@@ -25,7 +25,6 @@ class CartModel {
     };
   }
 
-  // TODO: dapetin total price
   double getTotalPrice() {
     return product.price * quantity;
   }

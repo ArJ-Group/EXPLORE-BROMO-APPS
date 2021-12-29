@@ -143,7 +143,6 @@ class _DetailChatPageState extends State<DetailChatPage> {
 
     Widget chatInput() {
       return Container(
-        // TODO: supaya diatas keyboard
         padding: MediaQuery.of(context).viewInsets,
         margin: EdgeInsets.all(20),
         child: Column(

@@ -39,7 +39,6 @@ class _CampingPageState extends State<CampingPage> {
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
           notchMargin: 12,
-          // TODO: supaya tidak ada putih"nya
           clipBehavior: Clip.antiAliasWithSaveLayer,
           child: BottomNavigationBar(
             backgroundColor: backgroundColor4,

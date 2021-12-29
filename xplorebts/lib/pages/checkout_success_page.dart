@@ -76,7 +76,7 @@ class CheckoutSuccessPage extends StatelessWidget {
               ),
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/orders');
                 },
                 style: TextButton.styleFrom(
                   backgroundColor: Color(0xff39374B),
